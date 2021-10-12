@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talkies - Search</title>
+    <link
+      rel="icon"
+      type="image/ico"
+      href="../static/images/log_t_final (2).png"
+    />
+    <script
+      src="https://kit.fontawesome.com/9e6a57f71b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lovers+Quarrel"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/loading.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/search_navbar.css">
+    <link rel="stylesheet" href="../static/css/snow.css">
+    <link rel="stylesheet" href="../static/css/filter.css">
+    <link rel="stylesheet" href="../static/css/right-card.css">
+    <link rel="stylesheet" href="../static/css/card_right_side.css">
+    <link rel="stylesheet" href="../static/css/pagination.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href="../static/css/search_page.css" />
+    <link rel="stylesheet" href="../static/css/nomov.css" />
+  </head>
+
+  <body onload="loadingfunction()">
+    <div id="loading"></div>
+    <div class="navbar">
+      <div class="logo">
+          <a href="index.html"><img src="../static/images/logo_final.png" alt=""></a>
+      </div>
+      <div class="search-container">
+        <form action="">
+            <input type="text" placeholder="Enter your movie search" name="search" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <div class="right_nav cc-rockmenu" id="navbar">
+          <ul>
+              <li>
+                  <div class="dropdown rolling">
+                      <a href="index.html" class="dropbtn rolling_icon">
+                          <i class="fas fa-home"></i>
+                      </a>
+                      <span> <a href="index.html">Home</a></span>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon">
+                          <i class="fas fa-cookie-bite"></i> </a><span><button href="">Movies</button></span>
+                      <div class="dropdown-content">
+                          <div class="row">
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="../static/images/wallpaper_1.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon">
+                          <i class="fas fa-theater-masks"></i> </a><span><button href="">Genre</button></span>
+                      <div class="dropdown-content">
+                          <div class="row">
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon">
+                          <i class="fas fa-desktop"></i> </a><span><button href="">Quality</button></span>
+                      <div class="dropdown-content">
+                          <div class="row">
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon">
+                          <i class="fas fa-calendar-week"></i> </a><span><button href="">Year</button></span>
+                      <div class="dropdown-content">
+                          <div class="row">
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon">
+                          <i class="fas fa-utensils"></i> </a><span><button href="">TV Shows</button></span>
+                      <div class="dropdown-content">
+                          <div class="row">
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon"> <i class="fas fa-mask"></i> </a><span><button
+                              href="">Web-Series</button></span>
+                      <div class="dropdown-content">
+                          <div class="row">
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="search_page.html">Link 1</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon">
+                          <i class="fas fa-sign-in-alt"></i> </a><span><a href="signin_up.html">Sign In / Up</a></span>
+                  </div>
+              </li>
+          </ul>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+          </a>
+      </div>
+  </div>
+    <div class="divider-grid">
+      <div class="background_snow">
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+      </div>
+      <section>
+        <div class="grid_container">
+          <div class="filter">
+            
+            <div class="container" >
+              <div class="accordion">
+                <div class="accordion-item">
+                  <h3>filter's</h3>
+                </div>
+                <div class="accordion-item">
+                  <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">Category</span
+                    ><span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <fieldset class="checkbox-group">
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">Category</span
+                    ><span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <fieldset class="checkbox-group">
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">Category</span
+                    ><span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <fieldset class="checkbox-group">
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">Category</span
+                    ><span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <fieldset class="checkbox-group">
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">Category</span
+                    ><span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <fieldset class="checkbox-group">
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">Category</span
+                    ><span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <fieldset class="checkbox-group">
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <button id="accordion-button-1" aria-expanded="false">
+                    <span class="accordion-title">Category</span
+                    ><span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <fieldset class="checkbox-group">
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label class="checkbox-wrapper">
+                          <input type="checkbox" class="checkbox-input" />
+                          <span class="checkbox-tile">
+                            <span class="checkbox-label">cate.</span>
+                          </span>
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right_card_side">          
+            <div class="error-page">
+              <div>
+                <h1 data-h1="404">404</h1>
+                <p data-p="NOT FOUND">NOT FOUND</p>
+              </div>
+            </div>
+            <div id="particles-js"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <footer class="footer-distributed">
+          <div class="footer-left">
+            <!-- <h3>Company<span>logo</span></h3> -->
+            <img src="../static/images/logo_final.png">
+            <p class="footer-links">
+              <a href="index.html" class="link-1">Home</a>
+              <a href="About.html">About</a>
+              <a href="FAQ.html">Faq</a>
+              <a href="Feedback-FAQ.html">Contact</a>
+              <a href="Feedback-FAQ.html">Feedback</a>
+            </p>
+            <p class="footer-company-name">Talkies © 2021</p>
+          </div>
+          <div class="footer-center">
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+            </div>
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+1.555.555.5555</p>
+            </div>
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="mailto:support@company.com">support@company.com</a></p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <p class="footer-company-about">
+              <span>About the company</span>
+              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            </p>
+            <div class="footer-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </footer>
+    </section>
+    </div>
+    <script src="../static/js/loading.js"></script>
+    <script src="../static/js/navbar.js"></script>
+    <script src="../static/js/accordion.js"></script>
+    <script type="text/javascript" src="../static/js/particle.js"></script>
+  </body>
+</html>

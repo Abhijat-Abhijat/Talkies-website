@@ -1,0 +1,56 @@
+.mySwiper h1 {
+  color: white;
+}
+.mySwiper {
+  width: 80vw;
+  height: 100%;
+  padding-bottom: 30px;
+}
+.swiper-slide {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 70% 30%;
+  /* width: 10vh; */
+  height: 30vh;
+}
+.card-title {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  font-family: 'Comic Neue', cursive;
+  /* background-color: rgba(0, 0, 0, 0.534); */
+}
+.card-title a {
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+}
+.card-title a:last-child:hover{
+  transform: scale(.9);
+  color: aquamarine;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-container_2 {
+  width: 54vw;
+  height: 60vh;
+  padding: 0 50px;
+}
+.swiper-slide_2 {
+  width: 54vw;
+  height: 60vh;
+}
+.swiper-slide_2 img {
+  height: 60vh;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background: rgb(255, 255, 255,0.6);
+  color: black;
+  padding: 30px 20px;
+}
