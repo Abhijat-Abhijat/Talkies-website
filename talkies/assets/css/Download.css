@@ -1,0 +1,128 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 54vw 30vw;
+    padding: 0 7vw;
+    margin-top: 20px;
+    gap: 10px;
+}
+.info-box{
+    color: white;
+    /* margin: 1rem; */
+    background-color: rgba(251, 248, 248, 0.226);
+    height: 60vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 35% 53% 10%;
+}
+.video-player{
+    margin: 1rem;
+}
+.poster{
+    display: flex;
+}
+.about{
+    font-size: 0.8rem;
+    font-weight: 200;
+    line-height: 1.5;
+    width: 30vw ;
+    height: 40%;
+    /* overflow-y: scroll; */
+}
+.about h2, p{
+    width: calc(100% - 30px);
+    padding:0 10px;
+    font-family: 'Comic Neue', cursive;
+}
+.about h2{
+    margin: 0;
+    font-size: 2rem;
+    color: yellowgreen;
+}
+.about p{
+    height: auto;
+    margin: 0;
+    overflow-y: scroll;
+    font-size: 1rem;
+}
+.poster h2{
+    font-size: 3rem;
+}
+.poster h2 , .posterp , .postera{
+    width: 100%;
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    text-decoration: none;
+    font-family: 'Comic Neue', cursive;
+}
+.poster .posterimg{
+    position: relative;
+}
+.poster img{
+    width:7vw;
+    height:17vh;
+    margin: 10px;
+    border-radius: 0px;
+}
+.rank {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.125rem;
+    top: 10px;
+    z-index: 1000;
+    left: 1em;
+    /* right: 1em; */
+    /* background: rgba(0, 0, 0, 0.65); */
+    padding: 0.5em 0.5em 0.75em;
+    transition: transform 200ms cubic-bezier(0.81, 1, 0.21, 1);
+    clip-path: polygon(100% 0%, 100% 100%, 50% 85%, 0 100%, 0 0);
+    background: white;
+      color: black;
+  }
+  .rank:hover{
+    background: black;
+    color: white;
+  }
+.right-about{
+    width: 30vw;
+    padding: 0 1em 1em;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 45% 45%;
+    column-gap: 10%;
+}
+.right-about a{
+    padding: 1em 5em;
+    border-radius: 0.6em;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.first-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #f1c40f;
+    color: #fff;
+    background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;  
+    border: 2px solid #f1c40f;
+    transition: background 300ms ease-in-out;
+    width: 100%;
+  }
+  .first-btn:hover {
+    background-position: 0;
+  }
+.second-btn {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    transition: all 150ms ease-in-out;
+    width: 100%;
+  }
+  .second-btn:hover {
+      background-color: rgba(14, 13, 13, 0);
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  }
