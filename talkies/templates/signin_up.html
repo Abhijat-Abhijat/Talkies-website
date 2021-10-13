@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +8,7 @@
     <link
       rel="icon"
       type="image/ico"
-      href="../static/images/log_t_final (2).png"
+      href="{% static 'images/log_t_final (2).png' %}"
     />
     <link
       rel="stylesheet"
@@ -17,13 +18,13 @@
       rel="stylesheet"
       href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../static/css/initial.css">
-    <link rel="stylesheet" href="../static/css/loading.css">
-    <link rel="stylesheet" href="../static/css/navbar.css" />
-    <link rel="stylesheet" href="../static/css/search_navbar.css">    
-    <link rel="stylesheet" href="../static/css/snow.css">
-    <link rel="stylesheet" href="../static/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/signin_up.css" />
+    <link rel="stylesheet" href="{% static 'css/initial.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/search_navbar.css' %}">    
+    <link rel="stylesheet" href="{% static 'css/snow.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signin_up.css' %}" />
     
   </head>
 
@@ -31,16 +32,16 @@
     <div id="loading"></div>
     <div class="navbar">
       <div class="logo">
-          <a href="index.html"><img src="../static/images/logo_final.png" alt=""></a>
+          <a href="/"><img src="{% static 'images/logo_final.png' %}" alt=""></a>
       </div>
       <div class="right_nav cc-rockmenu" id="navbar">
           <ul>
               <li>
                   <div class="dropdown rolling">
-                      <a href="index.html" class="dropbtn rolling_icon">
+                      <a href="/" class="dropbtn rolling_icon">
                           <i class="fas fa-home"></i>
                       </a>
-                      <span> <a href="index.html">Home</a></span>
+                      <span> <a href="/">Home</a></span>
                   </div>
               </li>
               <li>
@@ -51,7 +52,7 @@
                           <div class="row">
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
-                                      <img src="../static/images/wallpaper_1.jpg" />
+                                      <img src="{% static 'images/wallpaper_1.jpg' %}" />
                                   </div>
                                   <div class="card_drop_title title-white">
                                       <a href="search_page.html">Link 1</a>
@@ -717,7 +718,7 @@
       <section>
         <div class="main">
           <div class="container a-container" id="a-container">
-            <form class="form" id="a-form" method="" action="">
+            <form class="form" id="a-form" method="POST" action="">
               <h2 class="form_title title">Create Account</h2>
               <div class="form__icons">
                 <a href="" class="form__icon"><i class="fab fa-google"></i></a
@@ -725,20 +726,22 @@
                 ><a href="" class="form__icon"><i class="fa fa-twitter"></i></a>
               </div>
               <span class="form__span">or use email for registration</span>
-              <input class="form__input" type="text" placeholder="Name" />
-              <input class="form__input" type="text" placeholder="Email" />
+              <input class="form__input" type="text" placeholder="Name" name="name" id="name" />
+              <input class="form__input" type="text" placeholder="Email" name="email" id="email"/>
               <input
                 class="form__input"
                 type="password"
                 placeholder="Password"
+                name="password"
+                id="password"
               />
-              <button class="form__button button submit" type="submit">
+              <input class="form__button button submit" type="submit">
                 SIGN UP
               </button>
             </form>
           </div>
           <div class="container b-container" id="b-container">
-            <form class="form" id="b-form" method="" action="">
+            <form class="form" id="b-form" method="POST" action="">
               <h2 class="form_title title">Sign in to Website</h2>
               <div class="form__icons">
                 <a href="" class="form__icon"><i class="fab fa-google"></i></a
@@ -746,13 +749,15 @@
                 ><a href="" class="form__icon"><i class="fa fa-twitter"></i></a>
               </div>
               <span class="form__span">or use your email account</span>
-              <input class="form__input" type="text" placeholder="Email" />
+              <input class="form__input" type="text" placeholder="Email" name="email" id="email"/>
               <input
                 class="form__input"
                 type="password"
                 placeholder="Password"
+                name="password"
+                id="password"
               /><a class="form__link">Forgot your password?</a>
-              <button class="form__button button submit" type="submit">
+              <input class="form__button button submit" type="submit">
                 SIGN IN
               </button>
             </form>
@@ -783,13 +788,13 @@
         <footer class="footer-distributed">
           <div class="footer-left">
             <!-- <h3>Company<span>logo</span></h3> -->
-            <img src="../static/images/logo_final.png">
+            <img src="{% static 'images/logo_final.png' %}">
             <p class="footer-links">
-              <a href="index.html" class="link-1">Home</a>
-              <a href="About.html">About</a>
-              <a href="FAQ.html">Faq</a>
-              <a href="Feedback-FAQ.html">Contact</a>
-              <a href="Feedback-FAQ.html">Feedback</a>
+              <a href="/" class="link-1">Home</a>
+              <a href="/about">About</a>
+              <a href="/faq">Faq</a>
+              <a href="/feedback">Contact</a>
+              <a href="/feedback">Feedback</a>
             </p>
             <p class="footer-company-name">Talkies © 2021</p>
           </div>
@@ -822,9 +827,9 @@
         </footer>
       </section>
     </div>
-    <script src="../static/js/navbar.js"></script>
-    <script src="../static/js/res_navbar.js"></script>
-    <script src="../static/js/loading.js"></script>
-    <script src="../static/js/signin_up.js"></script>
+    <script src="{% static 'js/navbar.js' %}"></script>
+    <script src="{% static 'js/res_navbar.js' %}"></script>
+    <script src="{% static 'js/loading.js' %}"></script>
+    <script src="{% static 'js/signin_up.js' %}"></script>
   </body>
 </html>

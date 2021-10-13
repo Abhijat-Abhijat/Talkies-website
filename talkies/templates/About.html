@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,19 +20,19 @@
     <link
       rel="icon"
       type="image/ico"
-      href="../static/images/log_t_final (2).png"
+      href="{% static 'images/log_t_final (2).png' %}"
     />
     <script
       src="https://kit.fontawesome.com/9e6a57f71b.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../static/css/navbar.css">
-    <link rel="stylesheet" href="../static/css/searchbar.css">
-    <link rel="stylesheet" href="../static/css/loading.css">
-    <link rel="stylesheet" href="../static/css/snow.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/initial.css" />
-    <link rel="stylesheet" type="text/css" href="../static/css/about.css">
-    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/searchbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+    <link rel="stylesheet" href="{% static 'css/snow.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/initial.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 
   </head>
 
@@ -39,16 +40,16 @@
     <div id="loading"></div>
     <div class="navbar">
       <div class="logo">
-          <a href="index.html"><img src="../static/images/logo_final.png" alt=""></a>
+          <a href="/"><img src="{% static 'images/logo_final.png' %}" alt=""></a>
       </div>
       <div class="right_nav cc-rockmenu" id="navbar">
           <ul>
               <li>
                   <div class="dropdown rolling">
-                      <a href="index.html" class="dropbtn rolling_icon">
+                      <a href="/" class="dropbtn rolling_icon">
                           <i class="fas fa-home"></i>
                       </a>
-                      <span> <a href="index.html">Home</a></span>
+                      <span> <a href="/">Home</a></span>
                   </div>
               </li>
               <li>
@@ -59,7 +60,7 @@
                           <div class="row">
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
-                                      <img src="../static/images/wallpaper_1.jpg" />
+                                      <img src="{% static 'images/wallpaper_1.jpg' %}" />
                                   </div>
                                   <div class="card_drop_title title-white">
                                       <a href="search_page.html">Link 1</a>
@@ -778,11 +779,11 @@
         <footer class="footer-distributed">
           <div class="footer-left">
             <!-- <h3>Company<span>logo</span></h3> -->
-            <img src="../static/images/logo_final.png">
+            <img src="{% static 'images/logo_final.png' %}">
             <p class="footer-links">
-              <a href="index.html" class="link-1">Home</a>
-              <a href="About.html">About</a>
-              <a href="FAQ.html">Faq</a>
+              <a href="/" class="link-1">Home</a>
+              <a href="/about">About</a>
+              <a href="/faq">Faq</a>
               <a href="Feedback-FAQ.html">Contact</a>
               <a href="Feedback-FAQ.html">Feedback</a>
             </p>
@@ -819,9 +820,9 @@
     </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="../static/js/swiper.js"></script>
-    <script src="../static/js/loading.js"></script>
-    <script src="../static/js/book_page.js"></script>
-    <script src="../static/js/res_navbar.js"></script>
+    <script src="{% static 'js/swiper.js' %}"></script>
+    <script src="{% static 'js/loading.js' %}"></script>
+    <script src="{% static 'js/book_page.js' %}"></script>
+    <script src="{% static 'js/res_navbar.js' %}"></script>
   </body>
 </html>

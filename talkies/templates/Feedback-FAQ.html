@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,7 @@
   <link
       rel="icon"
       type="image/ico"
-      href="../static/images/log_t_final (2).png"
+      href="{% static 'images/log_t_final (2).png' %}"
     />
   <link
   rel="stylesheet"
@@ -18,23 +19,23 @@
       src="https://kit.fontawesome.com/9e6a57f71b.js"
       crossorigin="anonymous"
     ></script>
-  <link rel="stylesheet" href="../static/css/loading.css">
-  <link rel="stylesheet" href="../static/css/initial.css">
-  <link rel="stylesheet" href="../static/css/snow.css">
-  <link rel="stylesheet" href="../static/css/navbar.css">
-  <link rel="stylesheet" href="../static/css/search_navbar.css">
-  <link rel="stylesheet" href="../static/css/footer.css">
-  <link rel="stylesheet" type="text/css" href="../static/css/Feedback-FAQ.css">
+  <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+  <link rel="stylesheet" href="{% static 'css/initial.css' %}">
+  <link rel="stylesheet" href="{% static 'css/snow.css' %}">
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  <link rel="stylesheet" href="{% static 'css/search_navbar.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/Feedback-FAQ.css' %}">
 </head>
 
 <body onload="loadingfunction()">
     <div id="loading"></div>
     <div class="navbar">
       <div class="logo">
-          <a href="index.html"><img src="../static/images/logo_final.png" alt=""></a>
+          <a href="/"><img src="{% static 'images/logo_final.png' %}" alt=""></a>
       </div>
       <div class="search-container">
-        <form action="">
+        <form action="POST">
             <input type="text" placeholder="Enter your movie search" name="search" />
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -43,10 +44,10 @@
           <ul>
               <li>
                   <div class="dropdown rolling">
-                      <a href="index.html" class="dropbtn rolling_icon">
+                      <a href="/" class="dropbtn rolling_icon">
                           <i class="fas fa-home"></i>
                       </a>
-                      <span> <a href="index.html">Home</a></span>
+                      <span> <a href="/">Home</a></span>
                   </div>
               </li>
               <li>
@@ -57,7 +58,7 @@
                           <div class="row">
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
-                                      <img src="../static/images/wallpaper_1.jpg" />
+                                      <img src="{% static 'images/wallpaper_1.jpg' %}" />
                                   </div>
                                   <div class="card_drop_title title-white">
                                       <a href="search_page.html">Link 1</a>
@@ -65,7 +66,7 @@
                               </div>
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg' %}" />
                                   </div>
                                   <div class="card_drop_title title-white">
                                       <a href="search_page.html">Link 1</a>
@@ -73,7 +74,7 @@
                               </div>
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg' %}" />
                                   </div>
                                   <div class="card_drop_title title-white">
                                       <a href="search_page.html">Link 1</a>
@@ -82,7 +83,7 @@
 
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg' %}" />
                                   </div>
                                   <div class="card_drop_title title-white">
                                       <a href="search_page.html">Link 1</a>
@@ -751,23 +752,24 @@
                         </div>
                     </div>
                     <div class="screen-body-item">
-                        <form action="">
+                        <form action="" method="POST">
+                            {% csrf_token %}
                             <div class="app-form">
                                 <div class="app-form-group">
-                                    <input type="text" class="app-form-control" placeholder="NAME">
+                                    <input type="text" class="app-form-control" placeholder="NAME" name="name" id="name">
                                 </div>
                             <div class="app-form-group">
-                                <input type="email" class="app-form-control" placeholder="EMAIL">
+                                <input type="email" class="app-form-control" placeholder="EMAIL" name="email" id="email">
                             </div>
                             <div class="app-form-group">
-                                <input type="text" class="app-form-control" placeholder="CONTACT NO">
+                                <input type="text" class="app-form-control" placeholder="CONTACT NO" name="contact" id="contact">
                             </div>
                             <div class="app-form-group message">
-                                <input type="text" class="app-form-control" placeholder="MESSAGE" style="height:200px">
+                                <input type="text" class="app-form-control" placeholder="MESSAGE" style="height:200px" name="message" id="message">
                             </div>
                             <div class="app-form-group buttons">
                                 <button type="reset" class="app-form-button">CANCEL</button>
-                               <button type="submit" class="app-form-button">SEND</button>
+                               <input type="submit" class="app-form-button" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -778,13 +780,13 @@
         <footer class="footer-distributed">
           <div class="footer-left">
             <!-- <h3>Company<span>logo</span></h3> -->
-            <img src="../static/images/logo_final.png">
+            <img src="{% static 'images/logo_final.png' %}">
             <p class="footer-links">
-              <a href="index.html" class="link-1">Home</a>
-              <a href="About.html">About</a>
-              <a href="FAQ.html">Faq</a>
-              <a href="Feedback-FAQ.html">Contact</a>
-              <a href="Feedback-FAQ.html">Feedback</a>
+              <a href="/" class="link-1">Home</a>
+              <a href="/about">About</a>
+              <a href="/faq">Faq</a>
+              <a href="/feedback">Contact</a>
+              <a href="/feedback">Feedback</a>
             </p>
             <p class="footer-company-name">Talkies © 2021</p>
           </div>
@@ -817,9 +819,9 @@
         </footer>
     </section>
   </div>
-  <script src="../static/js/navbar.js"></script>
-  <script src="../static/js/loading.js"></script>
-  <script src="../static/js/accordion.js"></script>
+  <script src="{% static 'js/navbar.js' %}"></script>
+  <script src="{% static 'js/loading.js' %}"></script>
+  <script src="{% static 'js/accordion.js' %}"></script>
 </body>
 
 </html>
