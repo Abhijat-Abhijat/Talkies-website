@@ -719,6 +719,7 @@
         <div class="main">
           <div class="container a-container" id="a-container">
             <form class="form" id="a-form" method="POST" action="">
+                {% csrf_token %}
               <h2 class="form_title title">Create Account</h2>
               <div class="form__icons">
                 <a href="" class="form__icon"><i class="fab fa-google"></i></a
@@ -726,18 +727,11 @@
                 ><a href="" class="form__icon"><i class="fa fa-twitter"></i></a>
               </div>
               <span class="form__span">or use email for registration</span>
-              <input class="form__input" type="text" placeholder="Name" name="name" id="name" />
+              <input class="form__input" type="text" placeholder="Name" name="username" id="username" />
               <input class="form__input" type="text" placeholder="Email" name="email" id="email"/>
-              <input
-                class="form__input"
-                type="password"
-                placeholder="Password"
-                name="password"
-                id="password"
+              <input class="form__input" type="password" placeholder="Password" name="password" id="password"
               />
-              <input class="form__button button submit" type="submit">
-                SIGN UP
-              </button>
+              <input class="button" type="submit" value="SIGN UP">
             </form>
           </div>
           <div class="container b-container" id="b-container">
@@ -757,9 +751,7 @@
                 name="password"
                 id="password"
               /><a class="form__link">Forgot your password?</a>
-              <input class="form__button button submit" type="submit">
-                SIGN IN
-              </button>
+              <button class="form__button" submit" type="submit" >SIGN IN</button>
             </form>
           </div>
           <div class="switch" id="switch-cnt">

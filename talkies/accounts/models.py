@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class UserLogin(models.Model):
-    name = models.CharField(max_length=35)
+    username = models.CharField(max_length=35)
     email = models.EmailField()
     password = models.CharField(max_length=120)
     login_count = models.PositiveBigIntegerField(default=0)
