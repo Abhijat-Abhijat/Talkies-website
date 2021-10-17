@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Talkies - Search</title>
+    <title>Talkies - Liked</title>
     <link
       rel="icon"
       type="image/ico"
@@ -22,16 +22,18 @@
       href="https://fonts.googleapis.com/css?family=Lovers+Quarrel"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Inconsolata:wght@500&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/loading.css">
     <link rel="stylesheet" href="../static/css/navbar.css">
     <link rel="stylesheet" href="../static/css/search_navbar.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/snow.css">
+    <link rel="stylesheet" href="../static/css/snow.css">
     <link rel="stylesheet" href="../static/css/filter.css">
     <link rel="stylesheet" href="../static/css/right-card.css">
     <link rel="stylesheet" href="../static/css/card_right_side.css">
     <link rel="stylesheet" href="../static/css/pagination.css">
     <link rel="stylesheet" href="../static/css/footer.css">
-    <link rel="stylesheet" href="../static/css/search_page.css" />
+    <link rel="stylesheet" href="../static/css/user_profile.css" />
+    <link rel="stylesheet" href="../static/css/user.css">
   </head>
 
   <body onload="loadingfunction()">
@@ -515,7 +517,13 @@
               <li>
                   <div class="dropdown rolling">
                       <a class="dropbtn rolling_icon">
-                          <i class="fas fa-sign-in-alt"></i> </a><span><a href="signin_up.html">Sign In / Up</a></span>
+                          <i class="fas fa-user"></i> </a><span><a href="user_profile.html">Profile</a></span>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon">
+                          <i class="fas fa-sign-out-alt"></i> </a><span><a href="">Log Out</a></span>
                   </div>
               </li>
           </ul>
@@ -729,6 +737,27 @@
       </div>
       <section>
         <div class="grid_container">
+          <div class="filter1">
+            <div class="container1" >
+              <div class="accordion1">
+                <div class="accordion1-item">
+                  <a href="user_profile.html">Profile</a>
+                </div>
+                <div class="accordion1-item">
+                  <a href="user_previously.html">Previously Watched</a>
+                </div>
+                <div class="accordion1-item">
+                  <a href="user_watch_later.html">Watch Later</a>
+                </div>
+                <div class="accordion1-item">
+                  <a href="user_downloaded.html">Downloaded</a>
+                </div>
+                <div class="accordion1-item">
+                  <a href="user_liked.html">Liked</a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="filter">
             <div class="container" >
               <div class="accordion">
@@ -1740,5 +1769,6 @@
     <script src="../static/js/loading.js"></script>
     <script src="../static/js/navbar.js"></script>
     <script src="../static/js/accordion.js"></script>
+    <script type="text/javascript" src="../static/js/particle.js"></script>
   </body>
 </html>
