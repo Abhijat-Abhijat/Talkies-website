@@ -1,2 +1,2 @@
 # Talkies---Website
-Talkies is  a Movie site (frontend)
+Talkies is  a Movie site 
