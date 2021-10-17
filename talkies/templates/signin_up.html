@@ -727,7 +727,7 @@
                 ><a href="" class="form__icon"><i class="fa fa-twitter"></i></a>
               </div>
               <span class="form__span">or use email for registration</span>
-              <input class="form__input" type="text" placeholder="Name" name="username" id="username" />
+              <input class="form__input" type="text" placeholder="Userame" name="username" id="username" />
               <input class="form__input" type="text" placeholder="Email" name="email" id="email"/>
               <input class="form__input" type="password" placeholder="Password" name="password" id="password"
               />
@@ -736,14 +736,15 @@
           </div>
           <div class="container b-container" id="b-container">
             <form class="form" id="b-form" method="POST" action="">
+                {% csrf_token %}
               <h2 class="form_title title">Sign in to Website</h2>
               <div class="form__icons">
                 <a href="" class="form__icon"><i class="fab fa-google"></i></a
                 ><a href="" class="form__icon"><i class="fa fa-facebook"></i></a
                 ><a href="" class="form__icon"><i class="fa fa-twitter"></i></a>
               </div>
-              <span class="form__span">or use your email account</span>
-              <input class="form__input" type="text" placeholder="Email" name="email" id="email"/>
+              <span class="form__span">or use your username</span>
+              <input class="form__input" type="text" placeholder="username" name="username" id="username"/>
               <input
                 class="form__input"
                 type="password"

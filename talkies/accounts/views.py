@@ -35,8 +35,12 @@ def signin(request):
         password = request.POST.get('password')
         user = authenticate(request, email=email, password=password)
 
-        
-
-
-
-    return render(request, "signin_up.html")
+        if user is not None:
+            login(request, user)
+            data = UserLogin.objects.get(id=request.user.id)
+            print("User logged in")
+            return render(request, "user_profile.html", {"data": data})
+        else:
+            return render(request, "index.html")
+    else:
+        return render(request, "signin_up.html")
