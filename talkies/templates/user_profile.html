@@ -9,7 +9,7 @@
     <link
       rel="icon"
       type="image/ico"
-      href="../static/images/log_t_final (2).png"
+      href="{% static 'images/log_t_final (2).png' %}"
     />
     <script
       src="https://kit.fontawesome.com/9e6a57f71b.js"
@@ -787,8 +787,8 @@
                 </div>
                 <div class="detail">
                   <ul>
-                    <li><p><i class="fas fa-user"></i>Username : Alpha</p></li>
-                    <li><p><i class="fas fa-envelope"></i>Email : Alpha</p></li>
+                    <li><p><i class="fas fa-user"></i>Username : {{ data.username }}</p></li>
+                    <li><p><i class="fas fa-envelope"></i>Email : {{ data.email }}</p></li>
                     <li><p><i class="fab fa-facebook-f"></i>Facebook : Alpha</p></li>
                     <li><p><i class="fab fa-twitter"></i>Twitter : Alpha</p></li>
                     <li><p><i class="fab fa-instagram"></i>Instagram : Alpha</p></li>

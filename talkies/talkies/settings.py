@@ -81,10 +81,10 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'djongo',
         'NAME': 'talkies',
-        'ENFORCE_SCHEMA': False,
-        'CLIENT': {
-            'host': "mongodb+srv://Himanshu:1234567890@moviesite.did9h.mongodb.net/test"
-        }
+        # 'ENFORCE_SCHEMA': False,
+        # 'CLIENT': {
+        #     'host': "mongodb+srv://Himanshu:1234567890@moviesite.did9h.mongodb.net/test"
+        # }
     }
 }
 

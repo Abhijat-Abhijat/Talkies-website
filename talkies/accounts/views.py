@@ -1,10 +1,10 @@
+from django.http import HttpResponseRedirect
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
-from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import auth, User
-from .models import UserLogin
-from django.http import HttpResponseRedirect
+from .models import UserLogin, UserProfile
 # Create your views here.
 
 def signup(request):
@@ -23,24 +23,41 @@ def signup(request):
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save()
             # return redirect(request, "/")
-                return HttpResponseRedirect('/')
+                return redirect("/user/login")
     elif request.method == "GET":
         print("GET")
+        print(request.GET.get("switch_btn"))
+        if request.GET.get("switch_btn") == "switch_btn":
+            print("button clicked")
+            # return redirect("/login")
         return render(request, "signin_up.html")
 
 
 def signin(request):
     if request.method == "POST":
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        user = authenticate(request, email=email, password=password)
+        user = authenticate(request, username=request.POST.get('username'), password=request.POST.get('password'))
+        # print(user)
 
         if user is not None:
             login(request, user)
-            data = UserLogin.objects.get(id=request.user.id)
+            data = User.objects.get(id=user.pk)
             print("User logged in")
-            return render(request, "user_profile.html", {"data": data})
+            # return render(request, "user_profile.html", {"data":data})
+            return redirect("/user/profile")
         else:
-            return render(request, "index.html")
+            print("User not logged in.")
+            # return render(request, "index.html")
+            return redirect("/login")
     else:
         return render(request, "signin_up.html")
+
+
+def logoutuser(request):
+    auth.logout(request)
+    return redirect("/")
+    print("User logged out. ")
+
+
+def userprofile(request):
+    data = request.user
+    return render(request, "user_profile.html", {"data": data})

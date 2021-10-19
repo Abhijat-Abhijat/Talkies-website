@@ -8,3 +8,11 @@ class UserLogin(models.Model):
     email = models.EmailField()
     password = models.CharField(max_length=120)
     login_count = models.PositiveBigIntegerField(default=0)
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # name = models.TextField(max_length=35)
+    email = models.EmailField()
+
+
+

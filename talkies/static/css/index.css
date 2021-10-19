@@ -3,16 +3,16 @@
 }
 body {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   margin: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: black;
 }
 .partition {
   width: 100vw;
   height: 100vh;
   background-color: black;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y ;
   overflow-y: scroll;
 }
 section {
@@ -21,36 +21,25 @@ section {
   border: none;
   outline: none;
   scroll-snap-align: start;
+  overflow: hidden;
 }
 section:nth-of-type(1) {
   background-image: url("../images/4.png");
   background-position: center;
   background-repeat: no-repeat;
-/*  background-color: #000;
-*//*  background: -webkit-linear-gradient(to bottom, #000000, #434343, #ffffff);
-  background: linear-gradient(to bottom, #000000, #434343, #ffffff);*/
 }
 section:nth-of-type(2) {
   background-image: url("../images/3.png");
   background-position: center;
   background-repeat: no-repeat;
-  /*background: #000000;
-  background: -webkit-linear-gradient(to bottom, #ffffff, #e6dada, #fbd786);
-  background: linear-gradient(to bottom, #ffffff, #e6dada, #fbd786);*/
 }
 
 section:nth-of-type(3) {
   background-image: url("../images/1.png");
   background-position: center;
   background-repeat: no-repeat;
-/*  background: #000;
-  background: -webkit-linear-gradient(to bottom, #fbd786, #c6ffdd, #274046);
-  background: linear-gradient(to bottom, #fbd786, #c6ffdd, #274046);*/
 }
 section:nth-of-type(4) {
-/*  background: #000;
-  background: -webkit-linear-gradient(to bottom, #274046, #e6dada);
-  background: linear-gradient(to bottom, #274046, #e6dada);*/
   background-image: url("../images/2.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -64,11 +53,9 @@ h1 {
   text-align: center;
   color: white;
 }
-
 ::-webkit-scrollbar {
   display: none;
 }
-
 .top_cat {
   text-align: center;
 }
@@ -88,7 +75,6 @@ h1 {
     0 0 100px #03e9f4;
   transition-delay: 0.1s;
 }
-
 .grid-container-3 {
   display: grid;
   grid-template-rows: 60vh 15vh 20vh;
@@ -98,7 +84,6 @@ h1 {
   grid-template-columns: 33vw 33vw 33vw;
   grid-template-rows: 45vh 45vh;
 }
-
 .grid-container > div {
   text-align: center;
 }
@@ -106,7 +91,6 @@ h1 {
   padding: 0.5em 0;
   color: #000000;
 }
-
 .grid-wrapper {
   display: grid;
   grid-template-columns: auto;
@@ -116,7 +100,6 @@ h1 {
   padding: 0.5em 0;
   color: #000000;
 }
-
 .grid-container_2 {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
@@ -125,13 +108,11 @@ h1 {
   padding: 10px;
   place-items: center;
 }
-
 .grid-container_2 > div {
   text-align: center;
   justify-content: center;
   place-items: center;
 }
-
 .navbar {
-  grid-template-columns: 70vw 30vw;
+  grid-template-columns: 70vw 3 0vw;
 }
