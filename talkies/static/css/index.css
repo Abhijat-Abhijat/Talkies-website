@@ -5,7 +5,7 @@ body {
   width: 100vw;
   height: 200vh;
   margin: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
   background-color: black;
 }
 .partition {
@@ -84,6 +84,12 @@ h1 {
   grid-template-columns: 33vw 33vw 33vw;
   grid-template-rows: 45vh 45vh;
 }
+.grid-container_1{
+  width: 100vw;
+  overflow:hidden;
+  height: 50vh;
+}
+
 .grid-container > div {
   text-align: center;
 }
@@ -96,9 +102,11 @@ h1 {
   grid-template-columns: auto;
   grid-template-rows: 7vh 90vh;
 }
+
 .grid-wrapper h1 {
   padding: 0.5em 0;
-  color: #000000;
+  color: #000000; 
+  font-size: 5vh;
 }
 .grid-container_2 {
   display: grid;
@@ -114,5 +122,5 @@ h1 {
   place-items: center;
 }
 .navbar {
-  grid-template-columns: 70vw 3 0vw;
+  grid-template-columns: 50vw 50vw;
 }

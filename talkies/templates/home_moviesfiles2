@@ -1,0 +1,171 @@
+[{
+  "_id": {
+    "$oid": "61682788ec119c8f6783d62d"
+  },
+  "name": "Free Guy",
+  "download": "https://voe.sx/ffko39u99wmq",
+  "duration": "110min",
+  "genre": "Action,Comedy,Sci-Fi",
+  "imdb_rating": "7.7",
+  "poster": "https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+  "stream": "https://voe.sx/e/ffko39u99wmq",
+  "trailer": "https://www.youtube.com/embed/jRn48HxssPI",
+  "user_rating": "",
+  "views": 1200,
+  "year": "2021",
+  "summary": "A bank teller discovers that he's actually an NPC inside a brutal, open world video game.",
+  "id": "1"
+},{
+  "_id": {
+    "$oid": "61682b77b1c240d2604ac037"
+  },
+  "name": "Venom: Let There Be Carnage ",
+  "download": "https://voe.sx/gtv42x7sec8x",
+  "duration": "97min",
+  "genre": "Action, Adventure,Comedy,Sci-Fi",
+  "imdb_rating": "6.6",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
+  "stream": "https://voe.sx/e/gtv42x7sec8x",
+  "trailer": "https://www.youtube.com/embed/-FmWuCgJmxo",
+  "user_rating": "",
+  "views": 1329,
+  "year": "2021",
+  "summary": "Eddie Brock struggles to adjust to his new life as the host of the alien symbiote Venom, which grants him super-human abilities in order to be a lethal vigilante. Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.",
+  "id": "2"
+},{
+  "_id": {
+    "$oid": "61682bc5b1c240d2604ac038"
+  },
+  "name": "Dune",
+  "download": "https://voe.sx/lfg6v3j73dgl",
+  "duration": "155min",
+  "genre": "Action, Drama,Comedy,Sci-Fi",
+  "imdb_rating": "8.6",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lr3cYNDlJcpT1EWzFH42aSIvkab.jpg",
+  "stream": "https://voe.sx/e/lfg6v3j73dgl",
+  "trailer": "https://www.youtube.com/embed/8g18jFHCLXk",
+  "user_rating": "",
+  "views": 1792,
+  "year": "2021",
+  "summary": "A mythic and emotionally charged hero’s journey, “Dune” tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet’s exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity’s greatest potential-only those who can conquer their fear will survive.",
+  "id": "3"
+},{
+  "_id": {
+    "$oid": "61682c75b1c240d2604ac039"
+  },
+  "name": "No Time to Die",
+  "download": "https://voe.sx/zgwk5ooznypl",
+  "duration": "163min",
+  "genre": "Action, Adventure,Thriller,Sci-Fi",
+  "imdb_rating": "8.0",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iUgygt3fscRoKWCV1d0C7FbM9TP.jpg",
+  "stream": "https://voe.sx/e/zgwk5ooznypl",
+  "trailer": "https://www.youtube.com/embed/N_gD9-Oa0fg",
+  "user_rating": "",
+  "views": 3490,
+  "year": "2021",
+  "summary": "\nBond has left active service and is enjoying a tranquil life in Jamaica. His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help. The mission to rescue a kidnapped scientist turns out to be far more treacherous than expected, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
+  "id": "4"
+},{
+  "_id": {
+    "$oid": "61682d09b1c240d2604ac03a"
+  },
+  "name": "Candyman",
+  "download": "https://voe.sx/ajplc3t6kjao",
+  "duration": "91min",
+  "genre": "Thriller,Horror",
+  "imdb_rating": "6.5",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dqoshZPLNsXlC1qtz5n34raUyrE.jpg",
+  "stream": "https://voe.sx/e/ajplc3t6kjao",
+  "trailer": "https://www.youtube.com/embed/TPBH3XO8YEU",
+  "user_rating": "",
+  "views": 7320,
+  "year": "2021",
+  "summary": "\nIn present day, a decade after the last of the Cabrini towers were torn down, Anthony and his partner move into a loft in the now gentrified Cabrini. A chance encounter with an old-timer exposes Anthony to the true story behind Candyman. Anxious to use these macabre details in his studio as fresh grist for paintings, he unknowingly opens a door to a complex past that unravels his own sanity and unleashes a terrifying wave of violence.",
+  "id": "5"
+},{
+  "_id": {
+    "$oid": "61682da3b1c240d2604ac03b"
+  },
+  "name": "Shang-Chi and the Legend of the Ten Rings",
+  "download": "https://voe.sx/oxs9rcowyz09",
+  "duration": "132min",
+  "genre": "Action,Adventure,Fantasy",
+  "imdb_rating": "8.0",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg",
+  "stream": "https://voe.sx/e/oxs9rcowyz09",
+  "trailer": "https://www.youtube.com/embed/8YjFbMbfXaQ",
+  "user_rating": "",
+  "views": 4529,
+  "year": "2021",
+  "summary": "Shang-Chi, the master of unarmed weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization.",
+  "id": "6"
+},{
+  "_id": {
+    "$oid": "61682e61b1c240d2604ac03c"
+  },
+  "name": "The Night House",
+  "download": "https://voe.sx/q7m4frljrb6q",
+  "duration": "107min",
+  "genre": "Thriller,Horror",
+  "imdb_rating": "8.0",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rqs2CXpc4d5FzeP1EZCYItAVo81.jpg",
+  "stream": "https://voe.sx/e/q7m4frljrb6q",
+  "trailer": "https://www.youtube.com/embed/W8WQGXkif_s",
+  "user_rating": "",
+  "views": 8391,
+  "year": "2021",
+  "summary": "\nA widow begins to uncover her recently deceased husband’s disturbing secrets.",
+  "id": "7"
+},{
+  "_id": {
+    "$oid": "61682efab1c240d2604ac03d"
+  },
+  "name": "The Suicide Squad ",
+  "download": "https://voe.sx/5bp70m1rzq7e",
+  "duration": "107min",
+  "genre": "Action,Adventure,Comedy",
+  "imdb_rating": "8.0",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kb4s0ML0iVZlG6wAKbbs9NAm6X.jpg",
+  "stream": "https://voe.sx/e/5bp70m1rzq7e",
+  "trailer": "https://www.youtube.com/embed/eg5ciqQzmK0",
+  "user_rating": "",
+  "views": 7632,
+  "year": "2021",
+  "summary": "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese.",
+  "id": "8"
+},{
+  "_id": {
+    "$oid": "61682f74b1c240d2604ac03e"
+  },
+  "name": "Don't Breathe 2",
+  "download": "https://voe.sx/t2fzoq5oyr5u",
+  "duration": "97min",
+  "genre": "Thriller,Horror",
+  "imdb_rating": "6.4",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hRMfgGFRAZIlvwVWy8DYJdLTpvN.jpg",
+  "stream": "https://voe.sx/e/t2fzoq5oyr5u",
+  "trailer": "https://www.youtube.com/embed/dCDLPlZAoeY",
+  "user_rating": "",
+  "views": 7648,
+  "year": "2021",
+  "summary": "\nHiding out for years in an isolated cabin, Norman Nordstrom has taken in and raised a young girl orphaned from a house fire. Their quiet existence is shattered when a group of kidnappers show up and take the girl, forcing Norman to leave his safe haven to save her.",
+  "id": "9"
+},{
+  "_id": {
+    "$oid": "61682fe1b1c240d2604ac03f"
+  },
+  "name": "The Protege",
+  "download": "https://voe.sx/9pjjykbai8yg",
+  "duration": "109min",
+  "genre": "Action,Thriller,Crime",
+  "imdb_rating": "6.6",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/o9FY8N5c8CXf22q8s4CmRRjAQJx.jpg",
+  "stream": "https://voe.sx/e/9pjjykbai8yg",
+  "trailer": "https://www.youtube.com/embed/fSqa0a3mGk8",
+  "user_rating": "",
+  "views": 9825,
+  "year": "2021",
+  "summary": "\nRescued as a child by the legendary assassin Moody, Anna is the world’s most skilled contract killer. However, when Moody is brutally killed, she vows revenge for the man who taught her everything she knows.",
+  "id": "10"
+}]

@@ -13,16 +13,15 @@ def signup(request):
             print("Enter valid data")
             return render(request, "signin_up.html")
         else:
-            print("POST")
+            # print("POST")
             username = request.POST.get('username')
             email = request.POST.get('email')
             password = request.POST.get('password')
-            if User.objects.filter(email=email).exists():
-                messages.info(request, "Email exists")
+            if (User.objects.filter(email=email).exists()) or (User.objects.filter(username=username).exists()):
+                messages.info(request, "Email exists.")
             else:
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save()
-            # return redirect(request, "/")
                 return redirect("/user/login")
     elif request.method == "GET":
         print("GET")
@@ -43,13 +42,13 @@ def signin(request):
             data = User.objects.get(id=user.pk)
             print("User logged in")
             # return render(request, "user_profile.html", {"data":data})
-            return redirect("/user/profile")
+            return redirect("/")
         else:
             print("User not logged in.")
             # return render(request, "index.html")
             return redirect("/login")
     else:
-        return render(request, "signin_up.html")
+        return render(request, "signin.html")
 
 
 def logoutuser(request):

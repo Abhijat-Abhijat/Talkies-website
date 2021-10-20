@@ -1,4 +1,5 @@
 from django.core.exceptions import ValidationError
+from django.http.response import HttpResponse
 from django.shortcuts import render
 from .models import feedbackModel
 from django.core.validators import EmailValidator, validate_email
@@ -44,3 +45,36 @@ def feedback(request):
         return render(request, "Feedback-FAQ.html")
     else:  
         return render(request, "Feedback-FAQ.html")
+
+def search(request):
+    query = request.GET['query']
+    if query == "":
+        return render(request, "search_page_nomov.html")
+    elif moviefiles.objects.filter(name__icontains=query):
+        allmovies = moviefiles.objects.filter(name__icontains=query) 
+        if not allmovies:
+            return render(request, "search_page_nomov.html")
+        else:
+            data = {'allmovies': allmovies}
+            return render(request, "search_page.html", data)
+    elif moviefiles.objects.filter(genre__icontains=query):
+        allmovies = moviefiles.objects.filter(genre__icontains = query)
+        if not allmovies:
+            return render(request, "search_page_nomov.html")
+        else:
+            data = {'allmovies': allmovies}
+            return render(request, "search_page.html",  data)
+    else:
+        return render(request, "search_page_nomov.html")
+
+
+
+def movieabout(request, slug):
+    data = moviefiles2.objects.filter(slug=slug)
+    print(data)
+    return render(request, "movabout.html", {"data": data})
+
+
+def moviewatch(request, slug):
+    data = moviefiles2.objects.filter(slug=slug)
+    return render(request, 'movwatch.html', {"data":  data})

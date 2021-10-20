@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +9,7 @@
     <link
       rel="icon"
       type="image/ico"
-      href="../static/images/log_t_final (2).png"
+      href="{% static '/images/log_t_final (2).png' %}"
     />
     <script
       src="https://kit.fontawesome.com/9e6a57f71b.js"
@@ -22,24 +23,24 @@
       href="https://fonts.googleapis.com/css?family=Lovers+Quarrel"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../static/css/loading.css">
-    <link rel="stylesheet" href="../static/css/navbar.css">
-    <link rel="stylesheet" href="../static/css/search_navbar.css">
-    <link rel="stylesheet" href="../static/css/snow.css">
-    <link rel="stylesheet" href="../static/css/filter.css">
-    <link rel="stylesheet" href="../static/css/right-card.css">
-    <link rel="stylesheet" href="../static/css/card_right_side.css">
-    <link rel="stylesheet" href="../static/css/pagination.css">
-    <link rel="stylesheet" href="../static/css/footer.css">
-    <link rel="stylesheet" href="../static/css/search_page.css" />
-    <link rel="stylesheet" href="../static/css/nomov.css" />
+    <link rel="stylesheet" href="{% static '/css/loading.css' %}">
+    <link rel="stylesheet" href="{% static '/css/navbar.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/search_navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/snow.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/filter.css' %}">
+    <link rel="stylesheet" href="{% static '/css/right-card.css' %}">
+    <link rel="stylesheet" href="{% static '/css/card_right_side.css' %}">
+    <link rel="stylesheet" href="{% static '/css/pagination.css' %}">
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static '/css/search_page.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/nomov.css' %}" />
   </head>
 
   <body onload="loadingfunction()">
     <div id="loading"></div>
     <div class="navbar">
       <div class="logo">
-          <a href="index.html"><img src="../static/images/logo_final.png" alt=""></a>
+          <a href="/"><img src="{% static '/images/logo_final.png' %}" alt=""></a>
       </div>
       <div class="search-container">
         <form action="">
@@ -51,10 +52,10 @@
           <ul>
               <li>
                   <div class="dropdown rolling">
-                      <a href="index.html" class="dropbtn rolling_icon">
+                      <a href="/" class="dropbtn rolling_icon">
                           <i class="fas fa-home"></i>
                       </a>
-                      <span> <a href="index.html">Home</a></span>
+                      <span> <a href="/">Home</a></span>
                   </div>
               </li>
               <li>
@@ -65,10 +66,10 @@
                           <div class="row">
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
-                                      <img src="../static/images/wallpaper_1.jpg" />
+                                      <img src="{% static '/images/wallpaper_1.jpg' %}" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -76,7 +77,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -84,32 +85,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
 
@@ -118,7 +94,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -126,7 +102,32 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                           </div>
@@ -144,7 +145,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -152,32 +153,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
 
@@ -186,7 +162,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -194,7 +170,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -202,7 +178,32 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                           </div>
@@ -220,7 +221,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -228,32 +229,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
 
@@ -262,7 +238,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -270,7 +246,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -278,7 +254,32 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                           </div>
@@ -296,7 +297,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -304,32 +305,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
 
@@ -338,7 +314,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -346,7 +322,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -354,7 +330,32 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                           </div>
@@ -372,7 +373,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -380,32 +381,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
 
@@ -414,7 +390,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -422,7 +398,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -430,7 +406,32 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                           </div>
@@ -448,7 +449,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -456,32 +457,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
 
@@ -490,7 +466,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -498,7 +474,7 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                               <div class="card_drop 1">
@@ -506,7 +482,32 @@
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
+                                  </div>
+                              </div>
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/search">Link 1</a>
                                   </div>
                               </div>
                           </div>
@@ -747,7 +748,7 @@
             <div class="container" >
               <div class="accordion">
                 <div class="accordion-item">
-                  <h3>filter's</h3>
+                  <h3>filters</h3>
                 </div>
                 <div class="accordion-item">
                   <button id="accordion-button-1" aria-expanded="false">
@@ -1062,13 +1063,13 @@
         <footer class="footer-distributed">
           <div class="footer-left">
             <!-- <h3>Company<span>logo</span></h3> -->
-            <img src="../static/images/logo_final.png">
+            <img src="{% static '/images/logo_final.png' %}">
             <p class="footer-links">
-              <a href="index.html" class="link-1">Home</a>
-              <a href="About.html">About</a>
-              <a href="FAQ.html">Faq</a>
-              <a href="Feedback-FAQ.html">Contact</a>
-              <a href="Feedback-FAQ.html">Feedback</a>
+              <a href="/" class="link-1">Home</a>
+              <a href="/about">About</a>
+              <a href="/faq">Faq</a>
+              <a href="/feedback">Contact</a>
+              <a href="/feedback">Feedback</a>
             </p>
             <p class="footer-company-name">Talkies © 2021</p>
           </div>
@@ -1101,9 +1102,9 @@
         </footer>
     </section>
     </div>
-    <script src="../static/js/loading.js"></script>
-    <script src="../static/js/navbar.js"></script>
-    <script src="../static/js/accordion.js"></script>
-    <script type="text/javascript" src="../static/js/particle.js"></script>
+    <script src="{% static '/js/loading.js' %}"></script>
+    <script src="{% static '/js/navbar.js'  %}"></script>
+    <script src="{% static '/js/accordion.js'  %}"></script>
+    <script type="text/javascript" src="{% static '/js/particle.js'  %}"></script>
   </body>
 </html>

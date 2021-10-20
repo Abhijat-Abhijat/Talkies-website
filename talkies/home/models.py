@@ -1,5 +1,9 @@
 from django.db import models
 from django.db.models.fields import DurationField
+from django.db.models.signals import pre_save
+from talkies.utils import unique_slug_generator
+
+
 
 # Create your models here.
 
@@ -24,6 +28,7 @@ class moviefiles(models.Model):
     year = models.IntegerField()
     summary = models.TextField(max_length=500)
     movie_id = models.IntegerField(default=1)
+    slug = models.CharField(max_length=130, null=True, blank=True)
 
 
 class moviefiles2(models.Model):
@@ -40,3 +45,11 @@ class moviefiles2(models.Model):
     year = models.IntegerField()
     summary = models.TextField(max_length=500)
     movie_id = models.IntegerField(default=1)
+    slug = models.CharField(max_length=130, null=True, blank=True)
+  
+
+
+def slug_generator(sender, instance, *args, **kwargs):
+    if not instance.slug:
+        instance.slug = unique_slug_generator(instance)
+pre_save.connect(slug_generator, sender=moviefiles2)
