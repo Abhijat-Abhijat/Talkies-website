@@ -1,0 +1,106 @@
+.edit{
+	width: 60vw;
+	height: 66vh;
+	margin: 20px auto;
+	backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 10px 20px 30px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 4vh 17vh 32vh;
+    grid-gap: 3vh;
+    font-family: 'Inconsolata', monospace;
+}
+h1{
+	width:60vw;
+}
+.image{
+	display: grid;
+	grid-template-columns: 20vw 35vw;
+    grid-template-rows: 17vh;
+	width:60vw;	
+}
+.img{
+  max-width: 20vw;
+  margin:auto;
+  display: grid;
+  grid-template-columns: auto;
+}
+.img h4{
+	text-align: center;
+}
+.img img{
+  border-radius: 50%;
+  /*background-color: brown;*/
+}
+.avatar{
+	padding: 10px;
+	width: 35vw;
+	
+}
+.select{
+	display: grid;
+	grid-template-columns: 6vw 6vw 6vw 6vw 6vw ;
+	grid-template-rows: 7vh 7vh;
+	grid-gap: 15px;
+}
+.select button{
+	height: 70px;
+	width: 70px;
+	padding: 0;
+	border-radius: 50%;
+	background: transparent;
+	color: transparent;
+	outline: none;
+	border:none ;
+}
+.select button:hover{
+	cursor: pointer;
+	transform: scale(.8);
+}
+
+.avatar img{
+	/*background-color: black;*/
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+}
+
+.right{
+	width: 95vw;
+}
+.right form p{
+	width:95vw;
+}
+form{
+	margin-top: 16px;
+}
+input{
+	margin: 16px 0;
+	width: 95vw;
+	backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    font-size: 1.1rem;
+    padding: 4px 10px;
+    color: white;
+    outline: none;
+}
+input[type=submit]{
+	width: fit-content;
+	padding:10px 20px;
+	float: right;
+}
+input[type=submit]:hover{
+	backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    color: black;
+}
