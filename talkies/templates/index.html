@@ -1148,18 +1148,19 @@
         <div class="grid-wrapper">
           <h1>TOP 10 TRENDING</h1>
           <div class="grid-container_2">
+            {% for m in movie %}
             <div>
               <div class="game">
                 <div class="rank">1</div>
                 <div class="front">
                   <img
                     class="thumbnail"
-                    src="{% static 'images/mov2.jpg' %}"
+                    src="{{ m.poster }}"
                     alt=""
                   />
-                  <h3 class="name">Movie Name</h3>
+                  <h3 class="name">{{ m.name }}</h3>
                   <div class="stats">
-                    <p class="viewers">539.6k</p>
+                    <p class="viewers">{{ m.views }} views</p>
                     <div class="streamers">
                       <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
                       <img src="{% static 'images/imdb_logo.png' %}" alt="" />
@@ -1170,10 +1171,10 @@
 
                 <div class="back">
                   <div class="streaming-info">
-                    <p class="game-stat">559k <span> Views </span></p>
+                    <p class="game-stat">{{ m.views }} <span> Views </span></p>
                     <p class="game-stat">25.8k <span> Likes </span></p>
                   </div>
-                  <button class="btn">Watch Now</button>
+                  <a class="btn" href="{% url 'movie-watch' slug=m.slug %}">Watch Now</a>
                   <div class="streamers">
                     <div class="streamer">
                       <div class="icon">
@@ -1187,489 +1188,21 @@
                         <img src="{% static 'images/imdb_logo.png' %}" alt="" />
                       </div>
                       <p class="name">ImDB</p>
-                      <p class="number">9.5</p>
+                      <p class="number">{{ m.imdb_rating }}</p>
                     </div>
                     <div class="streamer">
                       <div class="icon">
                         <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
                       </div>
                       <p class="name">Rating</p>
-                      <p class="number">7</p>
+                      <p class="number">{{ m.user_rating }}</p>
                     </div>
                   </div>
                 </div>
                 <div class="background"></div>
               </div>
             </div>
-            <div>
-              <div class="game">
-                <div class="rank">1</div>
-                <div class="front">
-                  <img
-                    class="thumbnail"
-                    src="{% static 'images/mov2.jpg' %}"
-                    alt=""
-                  />
-                  <h3 class="name">Movie Name</h3>
-                  <div class="stats">
-                    <p class="viewers">539.6k</p>
-                    <div class="streamers">
-                      <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="back">
-                  <div class="streaming-info">
-                    <p class="game-stat">559k <span> Views </span></p>
-                    <p class="game-stat">25.8k <span> Likes </span></p>
-                  </div>
-                  <button class="btn">Watch Now</button>
-                  <div class="streamers">
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      </div>
-                      <p class="name">Rotten Tomato</p>
-                      <p class="number">100%</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      </div>
-                      <p class="name">ImDB</p>
-                      <p class="number">9.5</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                      </div>
-                      <p class="name">Rating</p>
-                      <p class="number">7</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="background"></div>
-              </div>
-            </div><div>
-              <div class="game">
-                <div class="rank">1</div>
-                <div class="front">
-                  <img
-                    class="thumbnail"
-                    src="{% static 'images/mov2.jpg' %}"
-                    alt=""
-                  />
-                  <h3 class="name">Movie Name</h3>
-                  <div class="stats">
-                    <p class="viewers">539.6k</p>
-                    <div class="streamers">
-                      <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="back">
-                  <div class="streaming-info">
-                    <p class="game-stat">559k <span> Views </span></p>
-                    <p class="game-stat">25.8k <span> Likes </span></p>
-                  </div>
-                  <button class="btn">Watch Now</button>
-                  <div class="streamers">
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      </div>
-                      <p class="name">Rotten Tomato</p>
-                      <p class="number">100%</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      </div>
-                      <p class="name">ImDB</p>
-                      <p class="number">9.5</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                      </div>
-                      <p class="name">Rating</p>
-                      <p class="number">7</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="background"></div>
-              </div>
-            </div><div>
-              <div class="game">
-                <div class="rank">1</div>
-                <div class="front">
-                  <img
-                    class="thumbnail"
-                    src="{% static 'images/mov2.jpg' %}"
-                    alt=""
-                  />
-                  <h3 class="name">Movie Name</h3>
-                  <div class="stats">
-                    <p class="viewers">539.6k</p>
-                    <div class="streamers">
-                      <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="back">
-                  <div class="streaming-info">
-                    <p class="game-stat">559k <span> Views </span></p>
-                    <p class="game-stat">25.8k <span> Likes </span></p>
-                  </div>
-                  <button class="btn">Watch Now</button>
-                  <div class="streamers">
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      </div>
-                      <p class="name">Rotten Tomato</p>
-                      <p class="number">100%</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      </div>
-                      <p class="name">ImDB</p>
-                      <p class="number">9.5</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                      </div>
-                      <p class="name">Rating</p>
-                      <p class="number">7</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="background"></div>
-              </div>
-            </div><div>
-              <div class="game">
-                <div class="rank">1</div>
-                <div class="front">
-                  <img
-                    class="thumbnail"
-                    src="{% static 'images/mov2.jpg' %}"
-                    alt=""
-                  />
-                  <h3 class="name">Movie Name</h3>
-                  <div class="stats">
-                    <p class="viewers">539.6k</p>
-                    <div class="streamers">
-                      <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="back">
-                  <div class="streaming-info">
-                    <p class="game-stat">559k <span> Views </span></p>
-                    <p class="game-stat">25.8k <span> Likes </span></p>
-                  </div>
-                  <button class="btn">Watch Now</button>
-                  <div class="streamers">
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      </div>
-                      <p class="name">Rotten Tomato</p>
-                      <p class="number">100%</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      </div>
-                      <p class="name">ImDB</p>
-                      <p class="number">9.5</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                      </div>
-                      <p class="name">Rating</p>
-                      <p class="number">7</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="background"></div>
-              </div>
-            </div><div>
-              <div class="game">
-                <div class="rank">1</div>
-                <div class="front">
-                  <img
-                    class="thumbnail"
-                    src="{% static 'images/mov2.jpg' %}"
-                    alt=""
-                  />
-                  <h3 class="name">Movie Name</h3>
-                  <div class="stats">
-                    <p class="viewers">539.6k</p>
-                    <div class="streamers">
-                      <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="back">
-                  <div class="streaming-info">
-                    <p class="game-stat">559k <span> Views </span></p>
-                    <p class="game-stat">25.8k <span> Likes </span></p>
-                  </div>
-                  <button class="btn">Watch Now</button>
-                  <div class="streamers">
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      </div>
-                      <p class="name">Rotten Tomato</p>
-                      <p class="number">100%</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      </div>
-                      <p class="name">ImDB</p>
-                      <p class="number">9.5</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                      </div>
-                      <p class="name">Rating</p>
-                      <p class="number">7</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="background"></div>
-              </div>
-            </div><div>
-              <div class="game">
-                <div class="rank">1</div>
-                <div class="front">
-                  <img
-                    class="thumbnail"
-                    src="{% static 'images/mov2.jpg' %}"
-                    alt=""
-                  />
-                  <h3 class="name">Movie Name</h3>
-                  <div class="stats">
-                    <p class="viewers">539.6k</p>
-                    <div class="streamers">
-                      <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="back">
-                  <div class="streaming-info">
-                    <p class="game-stat">559k <span> Views </span></p>
-                    <p class="game-stat">25.8k <span> Likes </span></p>
-                  </div>
-                  <button class="btn">Watch Now</button>
-                  <div class="streamers">
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      </div>
-                      <p class="name">Rotten Tomato</p>
-                      <p class="number">100%</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      </div>
-                      <p class="name">ImDB</p>
-                      <p class="number">9.5</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                      </div>
-                      <p class="name">Rating</p>
-                      <p class="number">7</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="background"></div>
-              </div>
-            </div><div>
-              <div class="game">
-                <div class="rank">1</div>
-                <div class="front">
-                  <img
-                    class="thumbnail"
-                    src="{% static 'images/mov2.jpg' %}"
-                    alt=""
-                  />
-                  <h3 class="name">Movie Name</h3>
-                  <div class="stats">
-                    <p class="viewers">539.6k</p>
-                    <div class="streamers">
-                      <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="back">
-                  <div class="streaming-info">
-                    <p class="game-stat">559k <span> Views </span></p>
-                    <p class="game-stat">25.8k <span> Likes </span></p>
-                  </div>
-                  <button class="btn">Watch Now</button>
-                  <div class="streamers">
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      </div>
-                      <p class="name">Rotten Tomato</p>
-                      <p class="number">100%</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      </div>
-                      <p class="name">ImDB</p>
-                      <p class="number">9.5</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                      </div>
-                      <p class="name">Rating</p>
-                      <p class="number">7</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="background"></div>
-              </div>
-            </div><div>
-              <div class="game">
-                <div class="rank">1</div>
-                <div class="front">
-                  <img
-                    class="thumbnail"
-                    src="{% static 'images/mov2.jpg' %}"
-                    alt=""
-                  />
-                  <h3 class="name">Movie Name</h3>
-                  <div class="stats">
-                    <p class="viewers">539.6k</p>
-                    <div class="streamers">
-                      <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="back">
-                  <div class="streaming-info">
-                    <p class="game-stat">559k <span> Views </span></p>
-                    <p class="game-stat">25.8k <span> Likes </span></p>
-                  </div>
-                  <button class="btn">Watch Now</button>
-                  <div class="streamers">
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      </div>
-                      <p class="name">Rotten Tomato</p>
-                      <p class="number">100%</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      </div>
-                      <p class="name">ImDB</p>
-                      <p class="number">9.5</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                      </div>
-                      <p class="name">Rating</p>
-                      <p class="number">7</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="background"></div>
-              </div>
-            </div><div>
-              <div class="game">
-                <div class="rank">1</div>
-                <div class="front">
-                  <img
-                    class="thumbnail"
-                    src="{% static 'images/mov2.jpg' %}"
-                    alt=""
-                  />
-                  <h3 class="name">Movie Name</h3>
-                  <div class="stats">
-                    <p class="viewers">539.6k</p>
-                    <div class="streamers">
-                      <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="back">
-                  <div class="streaming-info">
-                    <p class="game-stat">559k <span> Views </span></p>
-                    <p class="game-stat">25.8k <span> Likes </span></p>
-                  </div>
-                  <button class="btn">Watch Now</button>
-                  <div class="streamers">
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
-                      </div>
-                      <p class="name">Rotten Tomato</p>
-                      <p class="number">100%</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/imdb_logo.png' %}" alt="" />
-                      </div>
-                      <p class="name">ImDB</p>
-                      <p class="number">9.5</p>
-                    </div>
-                    <div class="streamer">
-                      <div class="icon">
-                        <img src="{% static 'images/log_t_final (2).png' %}" alt="" />
-                      </div>
-                      <p class="name">Rating</p>
-                      <p class="number">7</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="background"></div>
-              </div>
-            </div>
+          {% endfor %}
           </div>
         </div>
       </section>
@@ -1683,72 +1216,19 @@
                 <!-- Swiper -->
                 <div class="swiper-container swiper-container_2">
                   <div class="swiper-wrapper">
+                    {% for a in action %}
                     <div class="swiper-slide swiper-slide_2">
                       <div class="best_mov_card"> 
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
+                        <div class="img"><img src="{{ a.poster }}" alt=""></div>
                         <div class="button">
                           <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/action"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/action"><i class="fas fa-play-circle"></i></a>
                           <a href=""></a>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
+                    {% endfor %}
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
@@ -1760,72 +1240,19 @@
                 <!-- Swiper -->
                 <div class="swiper-container swiper-container_2">
                   <div class="swiper-wrapper">
+                    {% for c in comedy %}
                     <div class="swiper-slide swiper-slide_2">
                       <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
+                        <div class="img"><img src="{{ c.poster }}" alt=""></div>
                         <div class="button">
                           <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/comedy"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/comedy"><i class="fas fa-play-circle"></i></a>
                           <a href=""></a>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
+                    {% endfor %}
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
@@ -1837,149 +1264,43 @@
                 <!-- Swiper -->
                 <div class="swiper-container swiper-container_2">
                   <div class="swiper-wrapper">
+                    {% for d in drama %}
                     <div class="swiper-slide swiper-slide_2">
                       <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
+                        <div class="img"><img src="{{ d.poster }}" alt=""></div>
                         <div class="button">
                           <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/drama"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/drama"><i class="fas fa-play-circle"></i></a>
                           <a href=""></a>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
+                    {% endfor %}
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
               </div>
             </div>
             <div class="bottom1">
-              <h1>ROMANCE</h1>
+              <h1>ANIMATION</h1>
               <div class="swiper_2">
                 <!-- Swiper -->
                 <div class="swiper-container swiper-container_2">
                   <div class="swiper-wrapper">
+                    {% for a in animation %}
                     <div class="swiper-slide swiper-slide_2">
                       <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
+                        <div class="img"><img src="{{ a.poster }}" alt=""></div>
                         <div class="button">
                           <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/animation"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/animation"><i class="fas fa-play-circle"></i></a>
                           <a href=""></a>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
+                    {% endfor %}
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
@@ -1991,72 +1312,19 @@
                 <!-- Swiper -->
                 <div class="swiper-container swiper-container_2">
                   <div class="swiper-wrapper">
+                    {% for t in thriller %}
                     <div class="swiper-slide swiper-slide_2">
                       <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
+                        <div class="img"><img src="{{ t.poster }}" alt=""></div>
                         <div class="button">
                           <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/thriller"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/thriller"><i class="fas fa-play-circle"></i></a>
                           <a href=""></a>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
+                    {% endfor %}
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
@@ -2068,72 +1336,19 @@
                 <!-- Swiper -->
                 <div class="swiper-container swiper-container_2">
                   <div class="swiper-wrapper">
+                    {% for h in horror %}
                     <div class="swiper-slide swiper-slide_2">
                       <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
+                        <div class="img"><img src="{{ h.poster }}" alt=""></div>
                         <div class="button">
                           <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/horror"><i class="fas fa-play-circle"></i></a>
+                          <a href="/genre/horror"><i class="fas fa-play-circle"></i></a>
                           <a href=""></a>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_2">
-                      <div class="best_mov_card">
-                        <div class="img"><img src="{% static 'images/mov5.jpg' %}" alt=""></div>
-                        <div class="button">
-                          <a href=""></a>
-                          <a href="moviedesc.html"><i class="fas fa-play-circle"></i></a>
-                          <a href="*1*"><i class="fas fa-play-circle"></i></a>
-                          <a href=""></a>
-                        </div>
-                      </div>
-                    </div>
+                    {% endfor %}
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>

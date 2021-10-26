@@ -662,7 +662,7 @@
               <div class="card">
                 <img src="{{ all.poster }}" alt="" />
                 <div class="descriptions">
-                  <h1>{{ all.name }}</h1>
+                  <h1><a href="/movie-about/{{ all.slug }}">{{ all.name }}</a></h1>
                   <p>
                     {{ all.summary|truncatechars:50 | linebreaks }}
                   </p>
@@ -750,10 +750,10 @@
             <img src="{% static 'images/logo_final.png' %}">
             <p class="footer-links">
               <a href="/" class="link-1">Home</a>
-              <a href="About.html">About</a>
-              <a href="FAQ.html">Faq</a>
-              <a href="Feedback-FAQ.html">Contact</a>
-              <a href="Feedback-FAQ.html">Feedback</a>
+              <a href="/about">About</a>
+              <a href="/faq">Faq</a>
+              <a href="/feedback">Contact</a>
+              <a href="/feedback">Feedback</a>
             </p>
             <p class="footer-company-name">Talkies © 2021</p>
           </div>

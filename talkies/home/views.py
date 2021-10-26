@@ -13,13 +13,27 @@ from .models import moviefiles, moviefiles2, moviedata
 
 
 def home(request):
-    # data = moviefiles.objects.get(id=moviefiles.movie_id)
     data = moviefiles2.objects.all()
     nav = moviedata.objects.all()
-    # data = moviefiles.objects.get(moviefiles.movie_id)
-    # print(data) 
-    return render(request, "index.html", {"data": data, "nav": nav})
-    # return render(request, "index.html")
+    movie = moviefiles.objects.all().order_by('-views')[:10]
+    action = moviefiles.objects.filter(genre__icontains="Action")
+    comedy = moviefiles.objects.filter(genre__icontains="Comedy")
+    drama = moviefiles.objects.filter(genre__icontains="Drama")
+    animation = moviefiles.objects.filter(genre__icontains="Animation")
+    thriller = moviefiles.objects.filter(genre__icontains="Thriller")
+    horror = moviefiles.objects.filter(genre__icontains="Horror")
+    context = {
+        'data': data,
+        'nav': nav,
+        'movie': movie,
+        'action': action,
+        'comedy': comedy,
+        'drama': drama,
+        'animation': animation,
+        'thriller': thriller,
+        'horror': horror
+    }
+    return render(request, "index.html", context)
 
 
 def about(request):
@@ -76,34 +90,16 @@ def search(request):
 
 
 def movieabout(request, slug):
-    data = moviefiles2.objects.filter(slug=slug)
-    user = request.user
+    data = moviefiles.objects.filter(slug=slug)
     nav = moviedata.objects.all()
-    # if request.method == "POST":
-    #     movie_id = request.POST.get('home:movie_id')
-    #     print(movie_id)
-    #     obj = moviefiles2.objects.get(id=movie_id)
-    #     print(obj)
-
-    #     if user in obj.liked.all():
-    #         obj.likwed.remove(user)
-    #     else:
-    #         obj.liked.add(user)
-    #     like, created = Like.objects.get_or_create(user=user, movie_id=movie_id)
-
-    #     if not created:
-    #         if like.value == "Like":
-    #             like.value = "Unlike"
-    #         else:
-    #             like.value = "Like"
-    #     like.save()
-    # return redirect('home:movie-about/')
-    return render(request, "movabout.html", {"data": data, "nav": nav})
+    movie = moviefiles.objects.all().order_by('-views')[:5]
+    return render(request, "movabout.html", {"data": data, "nav": nav, "movie": movie})
 
 
 def moviewatch(request, slug):
-    data = moviefiles2.objects.filter(slug=slug)
-    return render(request, 'movwatch.html', {"data":  data})
+    nav = moviedata.objects.all()
+    data = moviefiles.objects.filter(slug=slug)
+    return render(request, 'movwatch.html', {"data":  data, "nav": nav})
 
 
 def cat_year(request, year):
@@ -121,7 +117,7 @@ def cat_year(request, year):
 
 def cat_genre(request, genre):
     g = {"genre": genre}
-    if moviefiles2.objects.filter(genre__icontains = g['genre']):
+    if moviefiles.objects.filter(genre__icontains = g['genre']):
         allmovies = moviefiles.objects.filter(genre__icontains = g['genre'])
         return render(request, "search_page.html", {"allmovies":allmovies})
     else:
@@ -130,7 +126,7 @@ def cat_genre(request, genre):
 
 def cat_quality(request, quality):
     q = {"quality" : quality }
-    if moviefiles2.objects.filter(quality__icontains = q['quality']):
+    if moviefiles.objects.filter(quality__icontains = q['quality']):
         allmovies = moviefiles.objects.filter(quality__icontains = q['quality'])
         return render(request, "search_page.html", {"quality": quality})
     else:

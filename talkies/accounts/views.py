@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import auth, User
 
 # from talkies.home.models import moviedata
-from home.models import moviedata
+from home.models import moviedata, moviefiles
 from .forms import UserUpdateForm
 from .models import UserLogin
 
@@ -96,4 +96,5 @@ def deactivateUser(request):
     user.save()
     messages.success(request, 'User deactivated successfully! ')
     return redirect('/')
-    
+
+
