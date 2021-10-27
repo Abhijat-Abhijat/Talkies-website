@@ -1151,7 +1151,7 @@
             {% for m in movie %}
             <div>
               <div class="game">
-                <div class="rank">1</div>
+                <div class="rank">{{ forloop.counter }}</div>
                 <div class="front">
                   <img
                     class="thumbnail"
@@ -1181,7 +1181,7 @@
                         <img src="{% static 'images/rotten_tomato.png' %}" alt="" />
                       </div>
                       <p class="name">Rotten Tomato</p>
-                      <p class="number">100%</p>
+                      <p class="number">{{ m.rt }}%</p>
                     </div>
                     <div class="streamer">
                       <div class="icon">
@@ -1202,7 +1202,7 @@
                 <div class="background"></div>
               </div>
             </div>
-          {% endfor %}
+            {% endfor %}
           </div>
         </div>
       </section>
@@ -1394,7 +1394,7 @@
               <a href="#"><i class="fa fa-facebook"></i></a>
               <a href="#"><i class="fa fa-twitter"></i></a>
               <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-github"></i></a>
+              <a href="https://www.github.com/ghostx31/Talkies---Website"><i class="fa fa-github"></i></a>
             </div>
           </div>
         </footer>

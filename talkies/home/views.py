@@ -1,14 +1,7 @@
 from django.core.exceptions import ValidationError
-from django.db.models.query_utils import refs_expression
-from django.http.request import HttpRequest
-from django.http.response import HttpResponse
 from django.shortcuts import redirect, render, get_object_or_404
-from .models import Like, feedbackModel
 from django.core.validators import EmailValidator, validate_email
-from django.http import HttpResponseRedirect
-from django.urls import reverse 
-# from .models import moviedata
-from .models import moviefiles, moviefiles2, moviedata
+from .models import moviefiles, moviefiles2, moviedata, feedbackModel, Like
 # Create your views here.
 
 
@@ -38,16 +31,25 @@ def home(request):
 
 def about(request):
     nav = moviedata.objects.all()
-    return render(request, "About.html", {"nav": nav})
+    context = {
+        "nav":nav
+    }
+    return render(request, "About.html", context)
 
 
 def faq(request):
     nav = moviedata.objects.all()
-    return render(request, "FAQ.html", {"nav": nav})
+    context = {
+        "nav" : nav
+    }
+    return render(request, "FAQ.html", context)
 
 
 def feedback(request):
     nav = moviedata.objects.all()
+    context = {
+        "nav" : nav
+    }
     if request.method == "POST":
         name = request.POST.get("name")
         email = request.POST.get("email")
@@ -63,7 +65,7 @@ def feedback(request):
         data.save()
         return render(request, "Feedback-FAQ.html")
     else:  
-        return render(request, "Feedback-FAQ.html", {"nav" : nav})
+        return render(request, "Feedback-FAQ.html", context)
 
 def search(request):
     query = request.GET['query']
@@ -75,14 +77,12 @@ def search(request):
         if not allmovies:
             return render(request, "search_page_nomov.html", {"nav": nav})
         else:
-            # data = {'allmovies': allmovies}
             return render(request, "search_page.html", {"allmovies": allmovies, "nav": nav })
     elif moviefiles.objects.filter(genre__icontains=query):
         allmovies = moviefiles.objects.filter(genre__icontains = query)
         if not allmovies:
             return render(request, "search_page_nomov.html", {"nav":  nav})
         else:
-            # data = {'allmovies': allmovies}
             return render(request, "search_page.html",  {"allmovies": allmovies, "nav": nav})
     else:
         return render(request, "search_page_nomov.html", {"nav": nav})
@@ -93,23 +93,32 @@ def movieabout(request, slug):
     data = moviefiles.objects.filter(slug=slug)
     nav = moviedata.objects.all()
     movie = moviefiles.objects.all().order_by('-views')[:5]
-    return render(request, "movabout.html", {"data": data, "nav": nav, "movie": movie})
+    context = {
+        "data" : data,
+        "nav" : nav,
+        "movie" : movie
+    }
+    return render(request, "movabout.html", context)
 
 
 def moviewatch(request, slug):
     nav = moviedata.objects.all()
     data = moviefiles.objects.filter(slug=slug)
-    return render(request, 'movwatch.html', {"data":  data, "nav": nav})
+    movie = moviefiles.objects.all().order_by('-views')[:5]
+    movie2 = moviefiles.objects.all().order_by('-imdb_rating')[:10]
+    context = {
+        "nav" : nav,
+        "data" : data,
+        "movie" : movie,
+        "movie2" : movie2
+    }
+    return render(request, 'movwatch.html', context)
 
 
 def cat_year(request, year):
-    # y = request.GET['name']
     y = {"year": year}
-    print(y['year'])
     if moviefiles.objects.filter(year__icontains = y['year']):
         allmovies = moviefiles.objects.filter(year__icontains = y['year'])
-        print(allmovies)
-        # {"yeardata":yeardata}
         return render(request, "search_page.html", {"allmovies": allmovies})
     else: 
         return render(request, "search_page_nomov.html")
@@ -138,7 +147,6 @@ def movieLike(request):
     if request.method == "POST":
         print("POST")
         movie_id = request.POST.get('home:movie_id')
-        # print(movie_id)
         obj = moviefiles2.objects.get(id=movie_id)
 
         if user in obj.liked.all():

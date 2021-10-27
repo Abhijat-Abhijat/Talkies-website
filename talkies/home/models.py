@@ -29,6 +29,7 @@ class moviefiles(models.Model):
     movie_id = models.IntegerField(default=1)
     slug = models.CharField(max_length=130, null=True, blank=True)
     liked = models.ManyToManyField(User, related_name='movie_like')
+    rt = models.IntegerField(default=1)
 
     @property
     def num_likes(self):
@@ -50,7 +51,8 @@ class moviefiles2(models.Model):
     summary = models.TextField(max_length=500)
     movie_id = models.IntegerField(default=1)
     slug = models.CharField(max_length=130, null=True, blank=True)
-  
+    rt = models.IntegerField(default=1)
+    
 
 
 def slug_generator(sender, instance, *args, **kwargs):

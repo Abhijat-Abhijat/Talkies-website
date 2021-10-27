@@ -443,20 +443,16 @@
             </div>
           </div>
           <div class="similarmov">
-            <h1>Similar Movie's</h1>
+            <h1>Similar Movies</h1>
             <br>
             <div class="similar">
+              {% for m in movie %}
               <div class="card">
-                <img src="{% static 'images/download.jpeg' %}" alt="" />
+                <img src="{{ m.poster }}" alt="" />
                 <div class="descriptions">
-                  <h1>John Wick 3</h1>
+                  <h1>{{ m.name }}</h1>
                   <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
+                    {{ m.summary|truncatechars:30 }}
                   </p>
                   <div class="buttons2">
                     <button><i class="fas fa-share-alt"></i></button>
@@ -465,167 +461,18 @@
                     <button><i class="far fa-bookmark"></i></button>
                   </div>
                   <div class="buttons">
-                    <a>
+                    <a href="{{ m.trailer }}"
                       <i class="fab fa-youtube"></i>
                       Trailer
                     </a>
-                    <a>
+                    <a href="/watch/{{ m.slug }}">
                       <i class="fab fa-youtube"></i>
                       Movie
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <img src="{% static 'images/download.jpeg' %}" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="{% static 'images/download.jpeg' %}" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="{% static 'images/download.jpeg' %}" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="{% static 'images/download.jpeg' %}" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="{% static 'images/download.jpeg' %}" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
+              {% endfor %}
             </div>
             <div class="seemore">
               <a href="">See More <i class="fas fa-forward"></i></a>
@@ -677,34 +524,20 @@
           </div>
           <div class="cate">
             <h1>Categories</h1>
+            {% for n in nav %}
             <ul>
-              <li><a href="">first item</a></li>
-              <li><a href="">second item</a></li>
-              <li><a href="">third item</a></li>
-              <li><a href="">Fee</a></li>
-              <li><a href="">Fi</a></li>
-              <li><a href="">Fo</a></li>
-              <li><a href="">Fum</a></li>
-              <li><a href="">Fee</a></li>
-              <li><a href="">Fi</a></li>
-              <li><a href="">Fo</a></li>
-              <li><a href="">Fum</a></li>
+              <li><a href="/genre/{{ n.genre }}">{{ n.genre }}</a></li>
             </ul>
+            {% endfor %}
           </div>
           <div class="trendnow">
             <h1>Trending Now</h1>
-            <ol>
-              <li><img src="{% static 'images/mov1.jpg"' %}'><a href="">Fee</a></li>
-              <li><img src="{% static 'images/mov1.jpg' %}"><a href="">Fi</a></li>
-              <li><img src="{% static 'images/mov1.jpg' %}"><a href="">Fo</a></li>
-              <li><img src="{% static 'images/mov1.jpg' %}"><a href="">Fum</a></li>
-              <li><img src="{% static 'images/mov1.jpg' %}"><a href="">Fee</a></li>
-              <li><img src="{% static 'images/mov1.jpg' %}"><a href="">Fi</a></li>
-              <li><img src="{% static 'images/mov1.jpg' %}"><a href="">Fo</a></li>
-              <li><img src="{% static 'images/mov1.jpg' %}"><a href="">Fum</a></li>
-              <li><img src="{% static 'images/mov1.jpg' %}"><a href="">Fee</a></li>
-              <li><img src="{% static 'images/mov1.jpg' %}"><a href="">Fi</a></li>
-            </ol>
+            {% for m in movie2 %}
+            <ul>
+              <!-- {{ forloop.counter }} -->
+          <li><img src="{{ m.poster }}"' %}><a href="">Fee</a></li>
+            </ul>
+            {% endfor %}
           </div>
         </div>
       </div>

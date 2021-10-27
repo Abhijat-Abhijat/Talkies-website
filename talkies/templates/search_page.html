@@ -656,7 +656,7 @@
             </div>
           </div>
           <div class="right_card_side">
-            <h1 style="color:white;padding:0 50px;">2339 results found</h1>
+            <h1 style="color:white;padding:0 50px;">{{ allmovies|length }} search results found.</h1>
             <div class="wrapper">
               {% for all in allmovies %} 
               <div class="card">
@@ -664,7 +664,7 @@
                 <div class="descriptions">
                   <h1><a href="/movie-about/{{ all.slug }}">{{ all.name }}</a></h1>
                   <p>
-                    {{ all.summary|truncatechars:50 | linebreaks }}
+                    {{ all.summary|truncatechars:100 | linebreaks }}
                   </p>
                   <div class="buttons2">
                     <button><i class="fas fa-share-alt"></i></button>
@@ -780,7 +780,7 @@
               <a href="#"><i class="fa fa-facebook"></i></a>
               <a href="#"><i class="fa fa-twitter"></i></a>
               <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-github"></i></a>
+              <a href="https://www.github.com/ghostx31/Talkies---Website"><i class="fa fa-github"></i></a>
             </div>
           </div>
         </footer>

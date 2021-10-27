@@ -79,14 +79,12 @@ WSGI_APPLICATION = 'talkies.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'djongo',
         'NAME': 'talkies',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'talkies',  
         # 'ENFORCE_SCHEMA': False,
         # 'CLIENT': {
-            # 'host': "mongodb+srv://Himanshu:1234567890@moviesite.did9h.mongodb.net/test"
+            # 'host': "mongodb+srv:/<username>:<password>@moviesite.did9h.mongodb.net/test"
         # }
     }
 }
@@ -135,6 +133,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
