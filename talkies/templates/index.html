@@ -606,18 +606,17 @@
                             href="/movie-about/{{ d.slug }}">Read more</a
                           >
                        </div>
+                       {% if user.is_authenticated %}
                         <div class="card_right__button">
-                          <a
-                            href="/watch/{{ d.slug }}"
-                            target="_blank"
-                            >WATCH MOVIE</a
-                          >
-                          <a
-                            href="{{ d.trailer }}"
-                            target="_blank"
-                            >WATCH TRAILER</a
-                          >
+                          <a href="/watch/{{ d.slug }}" target="_blank">WATCH MOVIE</a>
+                          <a href="{{ d.trailer }}" target="_blank">WATCH TRAILER</a>
                         </div>
+                        {% else %}
+                        <div class="card_right__button">
+                          <a href="/user/signup" target="_blank">WATCH MOVIE</a>
+                          <a href="{{ d.trailer }}" target="_blank">WATCH TRAILER</a>
+                        </div>
+                        {% endif %}
                       </div>
                     </div>  
                   </div>
@@ -1153,12 +1152,12 @@
               <div class="game">
                 <div class="rank">{{ forloop.counter }}</div>
                 <div class="front">
-                  <img
+                  <a href="/movie-about/{{ m.slug }}"><img
                     class="thumbnail"
                     src="{{ m.poster }}"
                     alt=""
                   />
-                  <h3 class="name">{{ m.name }}</h3>
+                  <a href="/movie-about/{{ m.slug }}"><h3 class="name">{{ m.name }}</h3></a>
                   <div class="stats">
                     <p class="viewers">{{ m.views }} views</p>
                     <div class="streamers">

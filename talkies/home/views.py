@@ -1,7 +1,10 @@
+from django.core.checks import messages
 from django.core.exceptions import ValidationError
 from django.shortcuts import redirect, render, get_object_or_404
 from django.core.validators import EmailValidator, validate_email
-from .models import moviefiles, moviefiles2, moviedata, feedbackModel, Like
+from .models import moviefiles, moviefiles2, moviedata, feedbackModel
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 # Create your views here.
 
 
@@ -91,12 +94,28 @@ def search(request):
 
 def movieabout(request, slug):
     data = moviefiles.objects.filter(slug=slug)
+    print(data[0])
     nav = moviedata.objects.all()
     movie = moviefiles.objects.all().order_by('-views')[:5]
+    # data2 = moviefiles.objects.filter(id=moviefiles.id)
+    # comments = MovieComment.objects.filter(no=movie)
+    # comments = MovieComment.objects.filter(movie=data)
+    # comments = MovieComment.objects.filter(tag__id__in=data.all())
+    comments = MovieComment.objects.filter(movie_id=data)
+    # print(comments[0])
+    stuff = get_object_or_404(moviefiles, slug=slug)
+    total_likes = stuff.total_likes()
+    liked = False
+    if stuff.liked.filter(id=request.user.id).exists():
+        liked = True
+    
     context = {
         "data" : data,
         "nav" : nav,
-        "movie" : movie
+        "movie" : movie,
+        "total_likes" : total_likes,
+        "liked" : liked,
+        "comments": comments,
     }
     return render(request, "movabout.html", context)
 
@@ -142,29 +161,36 @@ def cat_quality(request, quality):
         return render(request, "search_page_nomov.html")
 
 
-def movieLike(request):
+def movieLike(request, slug):
     user = request.user
-    if request.method == "POST":
-        print("POST")
-        movie_id = request.POST.get('home:movie_id')
-        obj = moviefiles2.objects.get(id=movie_id)
-
-        if user in obj.liked.all():
-            obj.liked.remove(user)
-            print("removed like")
+    if user.is_authenticated:
+        post = get_object_or_404(moviefiles, slug=request.POST.get('post_id'))
+        liked = False  
+        if post.liked.filter(id=request.user.id).exists():
+            post.liked.remove(request.user)
+            liked = False 
+            return HttpResponseRedirect(reverse('movie-about', args=[str(slug)]))
         else:
-            obj.liked.add(user)
-            print("added like")
-        like, created = Like.objects.get_or_create(user=user, movie_id=movie_id)
+            post.liked.add(request.user)
+            liked = True
+            return HttpResponseRedirect(reverse('movie-about', args=[str(slug)]))
+    else: 
+        return redirect('/user/signup')
+        
 
-        if not created:
-            if like.value == 'Like':
-                like.value = 'Unlike'
-            else:
-                like.value = 'Like'
-
-        like.save() 
-    else:
-        print("GET")
-    return redirect('home:movie-about/')
-    
+# def movieComment(request):
+#     if request.method == "POST":
+#         print("POST")
+#         comment = request.POST.get('comments')
+#         user = request.user
+#         movieid = request.POST.get('movieid')
+#         print(movieid)
+#         # movie = moviefiles.objects.get(id=movieid)
+#         # movie = moviefiles.objects.get(id=movieid)
+#         movie = moviefiles.objects.get(id=movieid)
+#         print(movie)
+#         comment = MovieComment(comment=comment, user=user, movie=movie)
+#         comment.save() 
+#         messages.Info("Comment saved.")
+#     # return render(f'/movie-about/{movie.slug}')
+#     return redirect('/')

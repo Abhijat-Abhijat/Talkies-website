@@ -112,68 +112,7 @@ section:nth-of-type(2) {
   border-radius: 50%;
   /*background-color: brown;*/
 }
-.profile .dp .dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  /*cursor: pointer;*/
-  border-radius: 50% ;
-  transform: translateY(-130px);
-}
-.profile .dp .dropbtn i{
-  font-size: 1.6rem;
-}
 
-.profile .dp .dropbtn:hover, .profile .dp .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-.dropavatar {
-  position: relative;
-  /*display: inline-block;*/
-  margin: auto;
-}
-
-.dropavatar-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-    transform: translateY(-130px);
-    padding: 4px;
-    border-radius: 10px;
-    margin-left: -90px;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-}
-
-.dropavatar-content img {
-  /*color: black;*/
-  padding: 2px;
-  /*text-decoration: none;*/
-  display: block;
-  width: 55px;
-  height: 55px;
-}
-
-.dropavatar img:hover {
-  width: 50px;
-  height: 50px;
-}
-
-.show {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 2px;
-}
 
 .profile .detail{
   /*background-color: yellowgreen;*/
@@ -213,8 +152,9 @@ section:nth-of-type(2) {
     border: 1px solid rgba(209, 213, 219, 0.3);
     color: black;
 }
-.detail ul li button:nth-of-type(1){
+.detail ul li:nth-of-type(3){
   float: left;
+  width:8vw;
 }
 .mov{
   backdrop-filter: blur(16px) saturate(180%);

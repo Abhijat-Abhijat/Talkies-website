@@ -50,7 +50,7 @@
                           <i class="fas fa-theater-masks"></i> </a><span><button href="">Genre</button></span>
                       <div class="dropdown-content">
                           <div class="row">
-                              {% for n in nav %}
+                            {% for n in nav %}
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
@@ -59,6 +59,7 @@
                                       <a href="/genre/{{ n.genre }}">{{ n.genre }}</a>
                                   </div>
                               </div>
+                              {% endfor %}
                           </div>
                       </div>
                   </div>
@@ -124,6 +125,7 @@
                         <i class="fas fa-sign-in-alt"></i> </a><span><a href="/user/signup">Sign In / Up</a></span>
                 </div>
             </li>
+            {% endif %}
           </ul>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
               <i class="fa fa-bars"></i>

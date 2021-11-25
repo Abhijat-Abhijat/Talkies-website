@@ -1,7 +1,6 @@
 from django.urls import path 
 from . import views
 
-# app_name = 'home'
 
 
 urlpatterns = [
@@ -15,5 +14,6 @@ urlpatterns = [
     path('year/<int:year>', views.cat_year, name="year"),
     path('genre/<str:genre>', views.cat_genre, name="genre"),
     path('quality/<str:quality>', views.cat_quality, name="quality"),
-    path('like/', views.movieLike, name="like-movie")
+    path('like/<slug:slug>', views.movieLike, name="like-movie"),
+    
 ]

@@ -1,15 +1,13 @@
-from typing import NewType
 from django.http import HttpResponseRedirect
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import auth, User
-
-# from talkies.home.models import moviedata
 from home.models import moviedata, moviefiles
 from .forms import UserUpdateForm
 from .models import UserLogin
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
@@ -30,8 +28,6 @@ def signup(request):
                 messages.info(request, "Email exists or username exists.")
             else:
                 user = User.objects.create_user(username=username, email=email, password=password)
-                # userlogin = UserLogin(facebook=facebook, twitter=twitter, instagram=instagram, user=user)
-                # userlogin.save()
                 return redirect("/user/login")
     else:
         return render(request, "signin_up.html", {"nav": nav})

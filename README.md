@@ -9,10 +9,9 @@
   - CSS
   - JavaScript 
 - Backend
-  - MongoDB for the database
+  - MongoDB 
 - Framework 
-  - Django 
-  - Djongo 
+  - Django  
 
 
 ### Deploying the project 
@@ -29,7 +28,9 @@
 **Since the database is present in my system locally, you will not have access to the database yet. So the site will not work completely.**
 
 - Create a localhost instance using MongoDB Compass and edit the database section in settings.py accordingly. 
-- Now run `python manage.py collectstatic` to collect the static files. Then run `python manage.py makemigrations` and then `python manage.py migrate` to populate the database. 
+- Now run `python manage.py collectstatic` to collect the static files. 
+- Create a database in the local server of Mongo with the name `talkies` and add a colllection `home_moviefiles`.
+- Then run `python manage.py makemigrations` and then `python manage.py migrate` to populate the database. 
 - The project is now setup and data can be added to the database for the functioning of the project. 
 
 
