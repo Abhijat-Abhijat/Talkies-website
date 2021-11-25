@@ -8,7 +8,7 @@ from django.urls import reverse
 # Create your views here.
 
 
-def home(request):
+def home(request):                          # View for hone page
     data = moviefiles2.objects.all()
     nav = moviedata.objects.all()
     movie = moviefiles.objects.all().order_by('-views')[:10]
@@ -32,7 +32,7 @@ def home(request):
     return render(request, "index.html", context)
 
 
-def about(request):
+def about(request):                     # View for about page 
     nav = moviedata.objects.all()
     context = {
         "nav":nav
@@ -40,7 +40,7 @@ def about(request):
     return render(request, "About.html", context)
 
 
-def faq(request):
+def faq(request):                       # View for FAQ page 
     nav = moviedata.objects.all()
     context = {
         "nav" : nav
@@ -48,12 +48,20 @@ def faq(request):
     return render(request, "FAQ.html", context)
 
 
-def feedback(request):
+def feedback(request):                  # View for feedback page 
     nav = moviedata.objects.all()
     context = {
         "nav" : nav
     }
-    if request.method == "POST":
+    if request.method == "POST":                        
+        '''
+            If the method is POST, then we will take the data the user entered and then save them to the backend. 
+            Also applied a email validator using the default django validation engine to make sure that the user 
+            enters a valid email. 
+            This is a very basic implementation made to give an idea about the implementation. Here the user only needs to add a "@"
+            symbol to get past the validation. More secure validation can be added later which checks for validation checks like gmail, 
+            yahoo etc. 
+        '''
         name = request.POST.get("name")
         email = request.POST.get("email")
         contact = request.POST.get("contact")
@@ -70,43 +78,45 @@ def feedback(request):
     else:  
         return render(request, "Feedback-FAQ.html", context)
 
-def search(request):
+def search(request):                        # Function to provide the website search functionality. 
     query = request.GET['query']
     nav = moviedata.objects.all()
-    if query == "":
+    if query == "":         # If the user enters a blank query then show 404 page. 
         return render(request, "search_page_nomov.html")
-    elif moviefiles.objects.filter(name__icontains=query):
+    elif moviefiles.objects.filter(name__icontains=query):          
+        '''
+            The user entered data is checked. If the data matches that of a movie title, then the movie is returned. 
+        '''
         allmovies = moviefiles.objects.filter(name__icontains=query) 
         if not allmovies:
             return render(request, "search_page_nomov.html", {"nav": nav})
         else:
             return render(request, "search_page.html", {"allmovies": allmovies, "nav": nav })
     elif moviefiles.objects.filter(genre__icontains=query):
+        '''
+            Checking if the data user entered matches a genre. If yes, then the genre is returned. 
+        '''
         allmovies = moviefiles.objects.filter(genre__icontains = query)
         if not allmovies:
             return render(request, "search_page_nomov.html", {"nav":  nav})
         else:
-            return render(request, "search_page.html",  {"allmovies": allmovies, "nav": nav})
+            '''
+                All the above search methods implement a functionality that if the data user entered does not match any records, 
+                then we return them a 404 page. 
+            '''
     else:
         return render(request, "search_page_nomov.html", {"nav": nav})
 
 
 
-def movieabout(request, slug):
+def movieabout(request, slug):                      # The about movie page function 
     data = moviefiles.objects.filter(slug=slug)
-    print(data[0])
     nav = moviedata.objects.all()
     movie = moviefiles.objects.all().order_by('-views')[:5]
-    # data2 = moviefiles.objects.filter(id=moviefiles.id)
-    # comments = MovieComment.objects.filter(no=movie)
-    # comments = MovieComment.objects.filter(movie=data)
-    # comments = MovieComment.objects.filter(tag__id__in=data.all())
-    comments = MovieComment.objects.filter(movie_id=data)
-    # print(comments[0])
     stuff = get_object_or_404(moviefiles, slug=slug)
     total_likes = stuff.total_likes()
     liked = False
-    if stuff.liked.filter(id=request.user.id).exists():
+    if stuff.liked.filter(id=request.user.id).exists(): # If user has already liked them unlike it.
         liked = True
     
     context = {
@@ -115,12 +125,11 @@ def movieabout(request, slug):
         "movie" : movie,
         "total_likes" : total_likes,
         "liked" : liked,
-        "comments": comments,
     }
     return render(request, "movabout.html", context)
 
 
-def moviewatch(request, slug):
+def moviewatch(request, slug):                              # Page to watch the movie 
     nav = moviedata.objects.all()
     data = moviefiles.objects.filter(slug=slug)
     movie = moviefiles.objects.all().order_by('-views')[:5]
@@ -134,7 +143,7 @@ def moviewatch(request, slug):
     return render(request, 'movwatch.html', context)
 
 
-def cat_year(request, year):
+def cat_year(request, year):                            # Year nav bar 
     y = {"year": year}
     if moviefiles.objects.filter(year__icontains = y['year']):
         allmovies = moviefiles.objects.filter(year__icontains = y['year'])
@@ -143,7 +152,7 @@ def cat_year(request, year):
         return render(request, "search_page_nomov.html")
 
 
-def cat_genre(request, genre):
+def cat_genre(request, genre):                          # Genre nav bar 
     g = {"genre": genre}
     if moviefiles.objects.filter(genre__icontains = g['genre']):
         allmovies = moviefiles.objects.filter(genre__icontains = g['genre'])
@@ -152,7 +161,7 @@ def cat_genre(request, genre):
         return render(request, "search_page_nomov.html")
 
 
-def cat_quality(request, quality):
+def cat_quality(request, quality):                          # Quality nav bar 
     q = {"quality" : quality }
     if moviefiles.objects.filter(quality__icontains = q['quality']):
         allmovies = moviefiles.objects.filter(quality__icontains = q['quality'])
@@ -161,10 +170,10 @@ def cat_quality(request, quality):
         return render(request, "search_page_nomov.html")
 
 
-def movieLike(request, slug):
+def movieLike(request, slug):                           # Function to implement the like functionality
     user = request.user
     if user.is_authenticated:
-        post = get_object_or_404(moviefiles, slug=request.POST.get('post_id'))
+        post = get_object_or_404(moviefiles, slug=request.POST.get('post_id'))  # Get the current post 
         liked = False  
         if post.liked.filter(id=request.user.id).exists():
             post.liked.remove(request.user)
@@ -175,7 +184,7 @@ def movieLike(request, slug):
             liked = True
             return HttpResponseRedirect(reverse('movie-about', args=[str(slug)]))
     else: 
-        return redirect('/user/signup')
+        return redirect('/user/signup') # If a user tries to like but is not logged in the send them to login page
         
 
 # def movieComment(request):
