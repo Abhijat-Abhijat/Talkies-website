@@ -374,7 +374,7 @@
                   <p>Likes</p>
                   <p>{{ total_likes }}</p>
                 </div>
-              </div>
+              </div>  
               <div class="btn">
                 <form action="{% url 'like-movie' d.slug %}" method="POST">
                   {% csrf_token %}

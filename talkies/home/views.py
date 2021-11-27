@@ -18,6 +18,8 @@ def home(request):                          # View for hone page
     animation = moviefiles.objects.filter(genre__icontains="Animation")
     thriller = moviefiles.objects.filter(genre__icontains="Thriller")
     horror = moviefiles.objects.filter(genre__icontains="Horror")
+    book1 = moviefiles2.objects.all().order_by('-views')[:5]
+    book2 = moviefiles2.objects.all().order_by('views')[:5]
     context = {
         'data': data,
         'nav': nav,
@@ -27,7 +29,9 @@ def home(request):                          # View for hone page
         'drama': drama,
         'animation': animation,
         'thriller': thriller,
-        'horror': horror
+        'horror': horror,
+        'book1': book1,
+        'book2': book2
     }
     return render(request, "index.html", context)
 
