@@ -190,20 +190,3 @@ def movieLike(request, slug):                           # Function to implement 
     else: 
         return redirect('/user/signup') # If a user tries to like but is not logged in the send them to login page
         
-
-# def movieComment(request):
-#     if request.method == "POST":
-#         print("POST")
-#         comment = request.POST.get('comments')
-#         user = request.user
-#         movieid = request.POST.get('movieid')
-#         print(movieid)
-#         # movie = moviefiles.objects.get(id=movieid)
-#         # movie = moviefiles.objects.get(id=movieid)
-#         movie = moviefiles.objects.get(id=movieid)
-#         print(movie)
-#         comment = MovieComment(comment=comment, user=user, movie=movie)
-#         comment.save() 
-#         messages.Info("Comment saved.")
-#     # return render(f'/movie-about/{movie.slug}')
-#     return redirect('/')
