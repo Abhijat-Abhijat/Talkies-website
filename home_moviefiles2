@@ -1,0 +1,201 @@
+[{
+  "_id": {
+    "$oid": "61682d09b1c240d2604ac03a"
+  },
+  "name": "Candyman",
+  "download": "https://dood.ws/d/zn6203e0wyvq",
+  "duration": "91min",
+  "genre": "Thriller,Horror",
+  "imdb_rating": "6.5",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dqoshZPLNsXlC1qtz5n34raUyrE.jpg",
+  "stream": "https://dood.ws/e/zn6203e0wyvq",
+  "trailer": "https://www.youtube.com/embed/TPBH3XO8YEU",
+  "user_rating": "5.4",
+  "views": 7320,
+  "year": "2021",
+  "summary": "\nIn present day, a decade after the last of the Cabrini towers were torn down, Anthony and his partner move into a loft in the now gentrified Cabrini. A chance encounter with an old-timer exposes Anthony to the true story behind Candyman. Anxious to use these macabre details in his studio as fresh grist for paintings, he unknowingly opens a door to a complex past that unravels his own sanity and unleashes a terrifying wave of violence.",
+  "id": "5",
+  "quality": "720p",
+  "slug": "candyman",
+  "rt": 84
+},{
+  "_id": {
+    "$oid": "61682e61b1c240d2604ac03c"
+  },
+  "name": "The Night House",
+  "download": "https://dood.ws/d/64t3qmdrh6sr",
+  "duration": "107min",
+  "genre": "Thriller,Horror",
+  "imdb_rating": "8.0",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rqs2CXpc4d5FzeP1EZCYItAVo81.jpg",
+  "stream": "https://dood.ws/e/64t3qmdrh6sr",
+  "trailer": "https://www.youtube.com/embed/W8WQGXkif_s",
+  "user_rating": "4.6",
+  "views": 8391,
+  "year": "2021",
+  "summary": "\nA widow begins to uncover her recently deceased husband’s disturbing secrets.",
+  "id": "7",
+  "quality": "720p",
+  "slug": "the-night-house",
+  "rt": 86
+},{
+  "_id": {
+    "$oid": "61682f74b1c240d2604ac03e"
+  },
+  "name": "Don't Breathe 2",
+  "download": "https://dood.ws/d/5zr5mh1efnqn",
+  "duration": "97min",
+  "genre": "Thriller,Horror",
+  "imdb_rating": "6.4",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hRMfgGFRAZIlvwVWy8DYJdLTpvN.jpg",
+  "stream": "https://dood.ws/e/5zr5mh1efnqn",
+  "trailer": "https://www.youtube.com/embed/dCDLPlZAoeY",
+  "user_rating": "7.3",
+  "views": 7648,
+  "year": "2021",
+  "summary": "\nHiding out for years in an isolated cabin, Norman Nordstrom has taken in and raised a young girl orphaned from a house fire. Their quiet existence is shattered when a group of kidnappers show up and take the girl, forcing Norman to leave his safe haven to save her.",
+  "id": "9",
+  "slug": "don-t-breathe-2",
+  "quality": "720p",
+  "rt": 45
+},{
+  "_id": {
+    "$oid": "61682efab1c240d2604ac03d"
+  },
+  "name": "The Suicide Squad ",
+  "download": "https://dood.ws/d/ow3miiffb7b5",
+  "duration": "107min",
+  "genre": "Action,Adventure,Comedy",
+  "imdb_rating": "8.0",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kb4s0ML0iVZlG6wAKbbs9NAm6X.jpg",
+  "stream": "https://dood.ws/e/ow3miiffb7b5",
+  "trailer": "https://www.youtube.com/embed/eg5ciqQzmK0",
+  "user_rating": "6.4",
+  "views": 7632,
+  "year": "2021",
+  "summary": "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese.",
+  "id": "8",
+  "quality": "720p",
+  "slug": "the-suicide-squad",
+  "rt": 90
+},{
+  "_id": {
+    "$oid": "61682da3b1c240d2604ac03b"
+  },
+  "name": "Shang-Chi and the Legend of the Ten Rings",
+  "download": "https://voe.sx/oxs9rcowyz09",
+  "duration": "132min",
+  "genre": "Action,Adventure,Fantasy",
+  "imdb_rating": "8.0",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg",
+  "stream": "https://voe.sx/e/oxs9rcowyz09",
+  "trailer": "https://www.youtube.com/embed/8YjFbMbfXaQ",
+  "user_rating": "4.6",
+  "views": 4529,
+  "year": "2021",
+  "summary": "Shang-Chi, the master of unarmed weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization.",
+  "id": "6",
+  "quality": "720p",
+  "slug": "shang-chi-and-the-legend-of-the-ten-rings",
+  "rt": 92
+},{
+  "_id": {
+    "$oid": "61682b77b1c240d2604ac037"
+  },
+  "name": "Venom: Let There Be Carnage ",
+  "download": "https://dood.ws/d/fcf3vafudipm",
+  "duration": "97min",
+  "genre": "Action, Adventure,Comedy,Sci-Fi",
+  "imdb_rating": "6.6",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
+  "stream": "https://dood.ws/e/fcf3vafudipm",
+  "trailer": "https://www.youtube.com/embed/-FmWuCgJmxo",
+  "user_rating": "8.3",
+  "views": 1329,
+  "year": "2021",
+  "summary": "Eddie Brock struggles to adjust to his new life as the host of the alien symbiote Venom, which grants him super-human abilities in order to be a lethal vigilante. Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.",
+  "id": "2",
+  "quality": "720p",
+  "slug": "venom-let-there-be-carnage",
+  "rt": 60
+},{
+  "_id": {
+    "$oid": "61682fe1b1c240d2604ac03f"
+  },
+  "name": "The Protege",
+  "download": "https://dood.ws/d/cz7bp3n2m4y3",
+  "duration": "109min",
+  "genre": "Action,Thriller,Crime",
+  "imdb_rating": "6.6",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/o9FY8N5c8CXf22q8s4CmRRjAQJx.jpg",
+  "stream": "https://dood.ws/e/cz7bp3n2m4y3",
+  "trailer": "https://www.youtube.com/embed/fSqa0a3mGk8",
+  "user_rating": "8.2",
+  "views": "9825",
+  "year": "2021",
+  "summary": "\nRescued as a child by the legendary assassin Moody, Anna is the world’s most skilled contract killer. However, when Moody is brutally killed, she vows revenge for the man who taught her everything she knows.",
+  "id": "10",
+  "quality": "720p",
+  "slug": "the-protege",
+  "rt": 62
+},{
+  "_id": {
+    "$oid": "61682bc5b1c240d2604ac038"
+  },
+  "name": "Dune",
+  "download": "https://dood.ws/d/yb96sqavuky4",
+  "duration": "155min",
+  "genre": "Action, Drama,Comedy,Sci-Fi",
+  "imdb_rating": "8.6",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lr3cYNDlJcpT1EWzFH42aSIvkab.jpg",
+  "stream": "https://dood.ws/e/yb96sqavuky4",
+  "trailer": "https://www.youtube.com/embed/8g18jFHCLXk",
+  "user_rating": "8.4",
+  "views": 1792,
+  "year": "2021",
+  "summary": "A mythic and emotionally charged hero’s journey, “Dune” tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet’s exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity’s greatest potential-only those who can conquer their fear will survive.",
+  "id": "3",
+  "slug": "dune",
+  "quality": "720p",
+  "rt": 83
+},{
+  "_id": {
+    "$oid": "61682c75b1c240d2604ac039"
+  },
+  "name": "No Time to Die",
+  "download": "https://dood.ws/d/emwzwt0fp7ti",
+  "duration": "163min",
+  "genre": "Action, Adventure,Thriller,Sci-Fi",
+  "imdb_rating": "8.0",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iUgygt3fscRoKWCV1d0C7FbM9TP.jpg",
+  "stream": "https://dood.ws/e/emwzwt0fp7ti",
+  "trailer": "https://www.youtube.com/embed/N_gD9-Oa0fg",
+  "user_rating": "1.1",
+  "views": 3490,
+  "year": "2021",
+  "summary": "\nBond has left active service and is enjoying a tranquil life in Jamaica. His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help. The mission to rescue a kidnapped scientist turns out to be far more treacherous than expected, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
+  "id": "4",
+  "quality": "720p",
+  "slug": "no-time-to-die",
+  "rt": 84
+},{
+  "_id": {
+    "$oid": "61682788ec119c8f6783d62d"
+  },
+  "name": "Free Guy",
+  "download": "https://dood.ws/d/lun44f05o893",
+  "duration": "110min",
+  "genre": "Action,Comedy,Sci-Fi",
+  "imdb_rating": "7.7",
+  "poster": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg",
+  "stream": "https://dood.ws/e/lun44f05o893",
+  "trailer": "https://www.youtube.com/embed/jRn48HxssPI",
+  "user_rating": "8.6",
+  "views": 1200,
+  "year": "2021",
+  "summary": "A bank teller discovers that he's actually an NPC inside a brutal, open world video game.",
+  "id": "1",
+  "quality": "720p",
+  "slug": "free-guy",
+  "rt": 80
+}]
