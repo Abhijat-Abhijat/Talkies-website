@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +9,7 @@
     <link
       rel="icon"
       type="image/ico"
-      href="../static/images/log_t_final (2).png"
+      href="{% static '/images/log_t_final (2).png' %}"
     />
     <script
       src="https://kit.fontawesome.com/9e6a57f71b.js"
@@ -22,24 +23,24 @@
       href="https://fonts.googleapis.com/css?family=Lovers+Quarrel"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../static/css/loading.css">
-    <link rel="stylesheet" href="../static/css/navbar.css">
-    <link rel="stylesheet" href="../static/css/search_navbar.css">
-    <link rel="stylesheet" href="../static/css/snow.css">
-    <link rel="stylesheet" href="../static/css/filter.css">
-    <link rel="stylesheet" href="../static/css/right-card.css">
-    <link rel="stylesheet" href="../static/css/card_right_side.css">
-    <link rel="stylesheet" href="../static/css/pagination.css">
-    <link rel="stylesheet" href="../static/css/footer.css">
-    <link rel="stylesheet" href="../static/css/search_page.css" />
-    <link rel="stylesheet" href="../static/css/nomov.css" />
+    <link rel="stylesheet" href="{% static '/css/loading.css' %}">
+    <link rel="stylesheet" href="{% static '/css/navbar.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/search_navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/snow.css'  %}">
+    <link rel="stylesheet" href="{% static '/css/filter.css' %}">
+    <link rel="stylesheet" href="{% static '/css/right-card.css' %}">
+    <link rel="stylesheet" href="{% static '/css/card_right_side.css' %}">
+    <link rel="stylesheet" href="{% static '/css/pagination.css' %}">
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static '/css/search_page.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/nomov.css' %}" />
   </head>
 
   <body onload="loadingfunction()">
     <div id="loading"></div>
     <div class="navbar">
       <div class="logo">
-          <a href="index.html"><img src="../static/images/logo_final.png" alt=""></a>
+          <a href="/"><img src="{% static '/images/logo_final.png' %}" alt=""></a>
       </div>
       <div class="search-container">
         <form action="">
@@ -51,86 +52,10 @@
           <ul>
               <li>
                   <div class="dropdown rolling">
-                      <a href="index.html" class="dropbtn rolling_icon">
+                      <a href="/" class="dropbtn rolling_icon">
                           <i class="fas fa-home"></i>
                       </a>
-                      <span> <a href="index.html">Home</a></span>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-cookie-bite"></i> </a><span><button href="">Movies</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="../static/images/wallpaper_1.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                      <span> <a href="/">Home</a></span>
                   </div>
               </li>
               <li>
@@ -139,72 +64,16 @@
                           <i class="fas fa-theater-masks"></i> </a><span><button href="">Genre</button></span>
                       <div class="dropdown-content">
                           <div class="row">
+                            {% for n in nav %}
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/genre/{{ n.genre }}">{{ n.genre }}</a>
                                   </div>
                               </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
+                              {% endfor %}
                           </div>
                       </div>
                   </div>
@@ -215,72 +84,16 @@
                           <i class="fas fa-desktop"></i> </a><span><button href="">Quality</button></span>
                       <div class="dropdown-content">
                           <div class="row">
+                            {% for n in nav %}
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/quality/{{ n.quality }}">{{ n.quality }}</a>
                                   </div>
                               </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
+                              {% endfor %}
                           </div>
                       </div>
                   </div>
@@ -291,246 +104,42 @@
                           <i class="fas fa-calendar-week"></i> </a><span><button href="">Year</button></span>
                       <div class="dropdown-content">
                           <div class="row">
+                            {% for n in av %}
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/year/{{ n.year }}">{{ n.year }}</a>
                                   </div>
                               </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
+                              {% endfor %}
                           </div>
                       </div>
                   </div>
               </li>
+              
+              {% if user.is_authenticated %}
               <li>
                   <div class="dropdown rolling">
                       <a class="dropbtn rolling_icon">
-                          <i class="fas fa-utensils"></i> </a><span><button href="">TV Shows</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon"> <i class="fas fa-mask"></i> </a><span><button
-                              href="">Web-Series</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                          <i class="fas fa-user"></i> </a><span><a href="/user/profile">Profile</a></span>
                   </div>
               </li>
               <li>
                   <div class="dropdown rolling">
                       <a class="dropbtn rolling_icon">
-                          <i class="fas fa-sign-in-alt"></i> </a><span><a href="signin_up.html">Sign In / Up</a></span>
+                          <i class="fas fa-sign-out-alt"></i> </a><span><a href="/user/logout">Log Out</a></span>
                   </div>
               </li>
+              {% else %}
               <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-user"></i> </a><span><a href="user_profile.html">Profile</a></span>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-sign-out-alt"></i> </a><span><a href="">Log Out</a></span>
-                  </div>
-              </li>
+                <div class="dropdown rolling">
+                    <a class="dropbtn rolling_icon">
+                        <i class="fas fa-sign-in-alt"></i> </a><span><a href="/user/signup">Sign In / Up</a></span>
+                </div>
+            </li>
+            {% endif %}
           </ul>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
               <i class="fa fa-bars"></i>
@@ -747,7 +356,7 @@
             <div class="container" >
               <div class="accordion">
                 <div class="accordion-item">
-                  <h3>filter's</h3>
+                  <h3>filters</h3>
                 </div>
                 <div class="accordion-item">
                   <button id="accordion-button-1" aria-expanded="false">
@@ -1062,13 +671,13 @@
         <footer class="footer-distributed">
           <div class="footer-left">
             <!-- <h3>Company<span>logo</span></h3> -->
-            <img src="../static/images/logo_final.png">
+            <img src="{% static '/images/logo_final.png' %}">
             <p class="footer-links">
-              <a href="index.html" class="link-1">Home</a>
-              <a href="About.html">About</a>
-              <a href="FAQ.html">Faq</a>
-              <a href="Feedback-FAQ.html">Contact</a>
-              <a href="Feedback-FAQ.html">Feedback</a>
+              <a href="/" class="link-1">Home</a>
+              <a href="/about">About</a>
+              <a href="/faq">Faq</a>
+              <a href="/feedback">Contact</a>
+              <a href="/feedback">Feedback</a>
             </p>
             <p class="footer-company-name">Talkies © 2021</p>
           </div>
@@ -1101,9 +710,9 @@
         </footer>
     </section>
     </div>
-    <script src="../static/js/loading.js"></script>
-    <script src="../static/js/navbar.js"></script>
-    <script src="../static/js/accordion.js"></script>
-    <script type="text/javascript" src="../static/js/particle.js"></script>
+    <script src="{% static '/js/loading.js' %}"></script>
+    <script src="{% static '/js/navbar.js'  %}"></script>
+    <script src="{% static '/js/accordion.js'  %}"></script>
+    <script type="text/javascript" src="{% static '/js/particle.js'  %}"></script>
   </body>
 </html>

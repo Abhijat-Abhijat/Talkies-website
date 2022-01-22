@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "616fab7a790ee00c7f158bce"
+  },
+  "year": "2021",
+  "genre": "Action",
+  "quality": "720p",
+  "id": "1"
+},{
+  "_id": {
+    "$oid": "616fabfc790ee00c7f158bd0"
+  },
+  "id": "2",
+  "year": "2020",
+  "genre": "Adventure",
+  "quality": "1080p"
+},{
+  "_id": {
+    "$oid": "616fac17790ee00c7f158bd1"
+  },
+  "id": "3",
+  "year": "2019",
+  "genre": "Sci-Fi",
+  "quality": "480p"
+}]

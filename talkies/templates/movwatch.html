@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,7 @@
   <link
       rel="icon"
       type="image/ico"
-      href="../static/images/log_t_final (2).png"
+      href="{% static 'images/log_t_final (2).png' %}"
     />
   <link
   rel="stylesheet"
@@ -21,23 +22,23 @@
       src="https://kit.fontawesome.com/9e6a57f71b.js"
       crossorigin="anonymous"
     ></script>
-  <link rel="stylesheet" href="../static/css/loading.css">
-  <link rel="stylesheet" href="../static/css/initial.css">
-  <link rel="stylesheet" href="../static/css/snow.css">
-  <link rel="stylesheet" href="../static/css/navbar.css">
-  <link rel="stylesheet" href="../static/css/search_navbar.css">
-  <link rel="stylesheet" type="text/css" href="../static/css/comment.css">
-  <link rel="stylesheet" href="../static/css/card_right_side.css">
-  <link rel="stylesheet" href="../static/css/footer.css">
-  <link rel="stylesheet" href="../static/css/movabout.css">
-  <link rel="stylesheet" type="text/css" href="../static/css/movwatch.css">
+  <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+  <link rel="stylesheet" href="{% static 'css/initial.css' %}">
+  <link rel="stylesheet" href="{% static 'css/snow.css' %}">
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  <link rel="stylesheet" href="{% static 'css/search_navbar.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/comment.css' %}">
+  <link rel="stylesheet" href="{% static 'css/card_right_side.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="stylesheet" href="{% static 'css/movabout.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/movwatch.css' %}">
 </head>
 
 <body onload="loadingfunction()">
     <div id="loading"></div>
     <div class="navbar">
       <div class="logo">
-          <a href="index.html"><img src="../static/images/logo_final.png" alt=""></a>
+          <a href="/"><img src="{% static 'images/logo_final.png' %}" alt=""></a>
       </div>
       <div class="search-container">
         <form action="">
@@ -49,86 +50,10 @@
           <ul>
               <li>
                   <div class="dropdown rolling">
-                      <a href="index.html" class="dropbtn rolling_icon">
+                      <a href="/" class="dropbtn rolling_icon">
                           <i class="fas fa-home"></i>
                       </a>
-                      <span> <a href="index.html">Home</a></span>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-cookie-bite"></i> </a><span><button href="">Movies</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="../static/images/wallpaper_1.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                      <span> <a href="/">Home</a></span>
                   </div>
               </li>
               <li>
@@ -137,72 +62,16 @@
                           <i class="fas fa-theater-masks"></i> </a><span><button href="">Genre</button></span>
                       <div class="dropdown-content">
                           <div class="row">
+                            {% for n in nav %}
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/genre/{{ n.genre }}">{{ n.genre }}</a>
                                   </div>
                               </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
+                              {% endfor %}
                           </div>
                       </div>
                   </div>
@@ -213,72 +82,16 @@
                           <i class="fas fa-desktop"></i> </a><span><button href="">Quality</button></span>
                       <div class="dropdown-content">
                           <div class="row">
+                            {% for n in nav %}
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/quality/{{ n.quality }}">{{ n.quality }}</a>
                                   </div>
                               </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
+                              {% endfor %}
                           </div>
                       </div>
                   </div>
@@ -289,246 +102,42 @@
                           <i class="fas fa-calendar-week"></i> </a><span><button href="">Year</button></span>
                       <div class="dropdown-content">
                           <div class="row">
+                            {% for n in nav %}
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/year/{{ n.year }}">{{ n.year }}</a>
                                   </div>
                               </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
+                              {% endfor %}
                           </div>
                       </div>
                   </div>
               </li>
+             
+              {% if user.is_authenticated %}
               <li>
                   <div class="dropdown rolling">
                       <a class="dropbtn rolling_icon">
-                          <i class="fas fa-utensils"></i> </a><span><button href="">TV Shows</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon"> <i class="fas fa-mask"></i> </a><span><button
-                              href="">Web-Series</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                          <i class="fas fa-user"></i> </a><span><a href="/user/profile">Profile</a></span>
                   </div>
               </li>
               <li>
                   <div class="dropdown rolling">
                       <a class="dropbtn rolling_icon">
-                          <i class="fas fa-sign-in-alt"></i> </a><span><a href="signin_up.html">Sign In / Up</a></span>
+                          <i class="fas fa-sign-out-alt"></i> </a><span><a href="/user/logout">Log Out</a></span>
                   </div>
               </li>
+              {% else %}
               <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-user"></i> </a><span><a href="user_profile.html">Profile</a></span>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-sign-out-alt"></i> </a><span><a href="">Log Out</a></span>
-                  </div>
-              </li>
+                <div class="dropdown rolling">
+                    <a class="dropbtn rolling_icon">
+                        <i class="fas fa-sign-in-alt"></i> </a><span><a href="/user/signup">Sign In / Up</a></span>
+                </div>
+            </li>
+            {% endif %}
           </ul>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
               <i class="fa fa-bars"></i>
@@ -742,8 +351,10 @@
       <div class="main">
         <div class="left">
           <div class="watch">
+            {% for d in data %}
             <h1>Watch Now</h1>
-            <iframe src="https://www.youtube.com/embed/ipjUI8OxvI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="{{ d.stream }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          {% endfor %}
           </div>
           <div class="comments">
             <h1>Comments</h1>
@@ -832,20 +443,16 @@
             </div>
           </div>
           <div class="similarmov">
-            <h1>Similar Movie's</h1>
+            <h1>Similar Movies</h1>
             <br>
             <div class="similar">
+              {% for m in movie %}
               <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
+                <img src="{{ m.poster }}" alt="" />
                 <div class="descriptions">
-                  <h1>John Wick 3</h1>
+                  <h1>{{ m.name }}</h1>
                   <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
+                    {{ m.summary|truncatechars:30 }}
                   </p>
                   <div class="buttons2">
                     <button><i class="fas fa-share-alt"></i></button>
@@ -854,167 +461,18 @@
                     <button><i class="far fa-bookmark"></i></button>
                   </div>
                   <div class="buttons">
-                    <a>
+                    <a href="{{ m.trailer }}"
                       <i class="fab fa-youtube"></i>
                       Trailer
                     </a>
-                    <a>
+                    <a href="/watch/{{ m.slug }}">
                       <i class="fab fa-youtube"></i>
                       Movie
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
+              {% endfor %}
             </div>
             <div class="seemore">
               <a href="">See More <i class="fas fa-forward"></i></a>
@@ -1024,28 +482,34 @@
         <div class="right">
           <div class="topbar">
             <div class="img">
-              <img src="../static/images/mov1.jpg">
+              {% for d in data %}
+              <img src="{{ d.poster }}">
+              {% endfor %}
             </div>
             <div class="movname">
               <div class="name">
-                <p>After</p>
+                {% for d in data %}
+                <p>{{ d.name }}</p>
+                {% endfor %}
               </div>
               <div class="small_detail">
-                <p>2010 . 150 min . Adventure</p>
+                {% for d in data %}
+                <p>{{ d.year }} . {{ d.duration }} . {{ d.genre }}</p>
+                {% endfor %}
               </div>
               <div class="rating">
                 <div class="rotten">
-                  <img src="../static/images/rotten_tomato.png">
+                  <img src="{% static 'images/rotten_tomato.png' %}">
                   <p>Rotten Tomato</p>
                   <p>100%</p>
                 </div>
                 <div class="imdb">
-                  <img src="../static/images/imdb_logo.png">
+                  <img src="{% static 'images/imdb_logo.png' %}">
                   <p>IMDb</p>
                   <p>7.5</p>
                 </div>
                 <div class="our">
-                  <img src="../static/images/log_t_final (2).png">
+                  <img src="{% static 'images/log_t_final (2).png' %}">
                   <p>Rating</p>
                   <p>6</p>
                 </div>
@@ -1060,34 +524,20 @@
           </div>
           <div class="cate">
             <h1>Categories</h1>
+            {% for n in nav %}
             <ul>
-              <li><a href="">first item</a></li>
-              <li><a href="">second item</a></li>
-              <li><a href="">third item</a></li>
-              <li><a href="">Fee</a></li>
-              <li><a href="">Fi</a></li>
-              <li><a href="">Fo</a></li>
-              <li><a href="">Fum</a></li>
-              <li><a href="">Fee</a></li>
-              <li><a href="">Fi</a></li>
-              <li><a href="">Fo</a></li>
-              <li><a href="">Fum</a></li>
+              <li><a href="/genre/{{ n.genre }}">{{ n.genre }}</a></li>
             </ul>
+            {% endfor %}
           </div>
           <div class="trendnow">
             <h1>Trending Now</h1>
-            <ol>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fee</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fi</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fo</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fum</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fee</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fi</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fo</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fum</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fee</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fi</a></li>
-            </ol>
+            {% for m in movie2 %}
+            <ul>
+              <!-- {{ forloop.counter }} -->
+          <li><img src="{{ m.poster }}"' %}><a href="">Fee</a></li>
+            </ul>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -1096,13 +546,13 @@
         <footer class="footer-distributed">
           <div class="footer-left">
             <!-- <h3>Company<span>logo</span></h3> -->
-            <img src="../static/images/logo_final.png">
+            <img src="{% static 'images/logo_final.png' %}">
             <p class="footer-links">
-              <a href="index.html" class="link-1">Home</a>
-              <a href="About.html">About</a>
-              <a href="FAQ.html">Faq</a>
-              <a href="Feedback-FAQ.html">Contact</a>
-              <a href="Feedback-FAQ.html">Feedback</a>
+              <a href="/" class="link-1">Home</a>
+              <a href="/about">About</a>
+              <a href="/faq">Faq</a>
+              <a href="/feedback">Contact</a>
+              <a href="/feedback">Feedback</a>
             </p>
             <p class="footer-company-name">Talkies © 2021</p>
           </div>
@@ -1135,8 +585,8 @@
         </footer>
     </section>
   </div>
-  <script src="../static/js/navbar.js"></script>
-  <script src="../static/js/loading.js"></script>
+  <script src="{% static 'js/navbar.js' %}"></script>
+  <script src="{% static 'js/loading.js' %}"></script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,893 +6,484 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Talkies - Movie Description</title>
-  <link
-      rel="icon"
-      type="image/ico"
-      href="../static/images/log_t_final (2).png"
-    />
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
+  <link rel="icon" type="image/ico" href="{% static 'images/log_t_final (2).png' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Inconsolata:wght@500&family=Special+Elite&display=swap" rel="stylesheet">
-  <script
-      src="https://kit.fontawesome.com/9e6a57f71b.js"
-      crossorigin="anonymous"
-    ></script>
-  <link rel="stylesheet" href="../static/css/loading.css">
-  <link rel="stylesheet" href="../static/css/initial.css">
-  <link rel="stylesheet" href="../static/css/snow.css">
-  <link rel="stylesheet" href="../static/css/navbar.css">
-  <link rel="stylesheet" href="../static/css/search_navbar.css">
-  <link rel="stylesheet" type="text/css" href="../static/css/comment.css">
-  <link rel="stylesheet" href="../static/css/card_right_side.css">
-  <link rel="stylesheet" href="../static/css/footer.css">
-  <link rel="stylesheet" href="../static/css/movabout.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Inconsolata:wght@500&family=Special+Elite&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9e6a57f71b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+  <link rel="stylesheet" href="{% static 'css/initial.css' %}">
+  <link rel="stylesheet" href="{% static 'css/snow.css' %}">
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  <link rel="stylesheet" href="{% static 'css/search_navbar.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/comment.css' %}">
+  <link rel="stylesheet" href="{% static 'css/card_right_side.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="stylesheet" href="{% static 'css/movabout.css' %}">
 </head>
 
 <body onload="loadingfunction()">
-    <div id="loading"></div>
-    <div class="navbar">
-      <div class="logo">
-          <a href="index.html"><img src="../static/images/logo_final.png" alt=""></a>
-      </div>
-      <div class="search-container">
-        <form action="">
-            <input type="text" placeholder="Enter your movie search" name="search" />
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-      <div class="right_nav cc-rockmenu" id="navbar">
-          <ul>
-              <li>
-                  <div class="dropdown rolling">
-                      <a href="index.html" class="dropbtn rolling_icon">
-                          <i class="fas fa-home"></i>
-                      </a>
-                      <span> <a href="index.html">Home</a></span>
+  <div id="loading"></div>
+  <div class="navbar">
+    <div class="logo">
+      <a href="/"><img src="{% static 'images/logo_final.png' %}" alt=""></a>
+    </div>
+    <div class="search-container">
+      <form action="/search" method="get">
+        <input type="text" placeholder="Enter your movie search" name="query" id="query" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <div class="right_nav cc-rockmenu" id="navbar">
+      <ul>
+        <li>
+          <div class="dropdown rolling">
+            <a href="/" class="dropbtn rolling_icon">
+              <i class="fas fa-home"></i>
+            </a>
+            <span> <a href="/">Home</a></span>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown rolling">
+            <a class="dropbtn rolling_icon">
+              <i class="fas fa-theater-masks"></i> </a><span><button href="">Genre</button></span>
+            <div class="dropdown-content">
+              <div class="row">
+                {% for n in nav %}
+                <div class="card_drop 1">
+                  <div class="card_drop_image">
+                    <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                   </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-cookie-bite"></i> </a><span><button href="">Movies</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="../static/images/wallpaper_1.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                  <div class="card_drop_title title-white">
+                    <a href="/genre/{{ n.genre }}">{{ n.genre }}</a>
                   </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-theater-masks"></i> </a><span><button href="">Genre</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown rolling">
+            <a class="dropbtn rolling_icon">
+              <i class="fas fa-desktop"></i> </a><span><button href="">Quality</button></span>
+            <div class="dropdown-content">
+              <div class="row">
+                {% for n in nav %}
+                <div class="card_drop 1">
+                  <div class="card_drop_image">
+                    <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                   </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-desktop"></i> </a><span><button href="">Quality</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                  <div class="card_drop_title title-white">
+                    <a href="/quality//{{ n.quality }}">{{ n.quality }}</a>
                   </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-calendar-week"></i> </a><span><button href="">Year</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown rolling">
+            <a class="dropbtn rolling_icon">
+              <i class="fas fa-calendar-week"></i> </a><span><button href="">Year</button></span>
+            <div class="dropdown-content">
+              <div class="row">
+                {% for n in nav %}
+                <div class="card_drop 1">
+                  <div class="card_drop_image">
+                    <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                   </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-utensils"></i> </a><span><button href="">TV Shows</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                  <div class="card_drop_title title-white">
+                    <a href="/year/{{ n.year }}">{{ n.year }}</a>
                   </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon"> <i class="fas fa-mask"></i> </a><span><button
-                              href="">Web-Series</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-sign-in-alt"></i> </a><span><a href="signin_up.html">Sign In / Up</a></span>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-user"></i> </a><span><a href="user_profile.html">Profile</a></span>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-sign-out-alt"></i> </a><span><a href="">Log Out</a></span>
-                  </div>
-              </li>
-          </ul>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-          </a>
-      </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </li>
+        {% if user.is_authenticated %}
+        <li>
+          <div class="dropdown rolling">
+            <a class="dropbtn rolling_icon">
+              <i class="fas fa-user"></i> </a><span><a href="/user/profile">Profile</a></span>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown rolling">
+            <a class="dropbtn rolling_icon">
+              <i class="fas fa-sign-out-alt"></i> </a><span><a href="/user/logout">Log Out</a></span>
+          </div>
+        </li>
+        {% else %}
+        <li>
+          <div class="dropdown rolling">
+            <a class="dropbtn rolling_icon">
+              <i class="fas fa-sign-in-alt"></i> </a><span><a href="/user/signup">Sign Up</a></span>
+          </div>
+        </li>
+        {% endif %}
+      </ul>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
   </div>
-    <div class="divider-grid">
+  <div class="divider-grid">
     <div class="background_snow">
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-            <div class="snow"></div>
-        </div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+      <div class="snow"></div>
+    </div>
     <section>
       <div class="main">
+
         <div class="left">
+
           <div class="topbar">
             <div class="img">
-              <img src="../static/images/mov1.jpg">
+              {% for d in data %}
+              <img src="{{ d.poster }}">
+              {% endfor %}
             </div>
             <div class="movname">
+              {% for d in data %}
               <div class="name">
-                <p>After</p>
+                <p>{{ d.name }}</p>
               </div>
               <div class="small_detail">
-                <p>2010 . 150 min . Adventure</p>
+                <p>{{ d.year }} . {{ d.duration }} . {{ d.genre }}</p>
               </div>
               <div class="rating">
                 <div class="rotten">
-                  <img src="../static/images/rotten_tomato.png">
+                  <img src="{% static 'images/rotten_tomato.png' %}">
                   <p>Rotten Tomato</p>
-                  <p>100%</p>
+                  <p>{{ d.rt }}%</p>
                 </div>
                 <div class="imdb">
-                  <img src="../static/images/imdb_logo.png">
+                  <img src="{% static 'images/imdb_logo.png' %}">
                   <p>IMDb</p>
-                  <p>7.5</p>
+                  <p>{{ d.imdb_rating }}</p>
                 </div>
                 <div class="our">
-                  <img src="../static/images/log_t_final (2).png">
+                  <img src="{% static 'images/log_t_final (2).png' %}">
                   <p>Rating</p>
-                  <p>6</p>
+                  <p>{{ d.user_rating }}</p>
+                  <p>Likes</p>
+                  <p>{{ total_likes }}</p>
                 </div>
-              </div>
+              </div>  
               <div class="btn">
-                <a href=""><i class="fas fa-share-alt"></i></a>
-                <a href=""><i class="fas fa-heart"></i></a>
-                <a href=""><i class="fas fa-play"></i></a>
-                <a href=""><i class="fas fa-download"></i></a>
-                <a href=""><i class="fas fa-thumbtack"></i></a>
+                <form action="{% url 'like-movie' d.slug %}" method="POST">
+                  {% csrf_token %}
+
+
+                  <a href=""><i class="fas fa-share-alt"></i></a>
+                  {% if liked %}
+                  <button type="submit" name="post_id" value="{{ d.slug }}">Unlike</button>
+                  {% else %}
+                  <button type="submit" name="post_id" value="{{ d.slug }}"><i class="fas fa-heart"></i>
+                    {% endif %}
+                    <a href="/watch/{{ d.slug }}"><i class="fas fa-play"></i></a>
+                    <a href="{{ d.download }}"><i class="fas fa-download"></i></a>
+                    <a href=""><i class="fas fa-thumbtack"></i></a>
+                </form>
               </div>
+              {% endfor %}
             </div>
           </div>
           <div class="descri">
+            {% for d in data %}
             <h1>Description</h1>
             <br>
             <p>
-            The movie opens with a voice-over by a teenage girl talking about how moments in your life that can define you while it shows a montage of shots of a couple spending time together. The girl says everything in her life was simple before him, and now it's just after.
-            Tessa (Josephine Langford) wakes up from a dream and starts to pack her room to leave for college. She is joined by her mother, Carol (Selma Blair) and her BF (best friend), Noah (Dylan Arnold) in the kitchen downstairs. Her mother is listing off items that she thinks that Tessa will need while Tessa reminds her that she is going to college and not a survival camp. Noah interjects and says he can drive up there and drop anything off if she forgets it.
-            The next scene shows them driving through various city settings until they get to her new University. Carol, Noah, and Tessa make their way through the crowded dorm halls looking for her new room, B-22. They open the door and are met by loud music and two girls sitting on the bed. Tessa introduces herself to her new roommate Steph (Khadijha Red Thunder) who is vaping. Steph introduces Tessa to Tristan (Pia Mia). Steph makes a remark about being unsure about having a freshman roommate, but she says it should be cool... she'll be her spirit guide. Tristan says that they can get Tessa into all the best places even without a fake ID. Carol leaves the room upset and demands that they ask for a room change since the room reeked of weed. She doesn't want these girls to distract Tessa from her schoolwork. Tessa reminds her that she is responsible and it won't be an issue. She says goodbye to both Noah and her mom. Tessa returns to her room, and Tristan is gone. Steph and Tessa chat about freaking out Carol, how Noah is Tessa's BF (not her brother as Steph believed) and still a senior in High school and Tessa's rather large book collection. Steph leaves, and Tessa unpacks. She is shown later in bed texting with Noah about starting her 1st day the next morning.
-            Tessa leaves her dorm early in the morning, and head's to her 1st class across campus. She meets Landon (Shane Paul McGhie) outside of a locked classroom. They are the first students to arrive. A professor comes by shortly and opens the door for them. It is an Econ 101 course. They chit chat about their majors and being first year students.</p>
+              {{ d.summary }}
+            </p>
+            {% endfor %}
           </div>
           <div class="trail">
+            {% for d in data %}
             <h1>Trailer</h1>
-            <iframe src="https://www.youtube.com/embed/ipjUI8OxvI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="{{ d.trailer }}" title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            {% endfor %}
           </div>
           <div class="comments">
-            <h1>Comments</h1>
-            <div class="comments-container">
-              <ul id="comments-list" class="comments-list">
-                <li>
-                  <div class="comment-main-level">
-                    <!-- Avatar -->
-                    <div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""></div>
-                    <div class="comment-box">
-                      <div class="comment-head">
-                        <h6 class="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
-                        <span>hace 20 minutos</span>
-                        <i class="fa fa-reply"></i>
-                        <i class="fa fa-heart"></i>
-                      </div>
-                      <div class="comment-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                      </div>
-                    </div>
-                  </div>
-                  <ul class="comments-list reply-list">
-                    <li>
-                      <div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg" alt=""></div>
-                      <div class="comment-box">
-                        <div class="comment-head">
-                          <h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena Rojero</a></h6>
-                          <span>hace 10 minutos</span>
-                          <i class="fa fa-reply"></i>
-                          <i class="fa fa-heart"></i>
-                        </div>
-                        <div class="comment-content">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                        </div>
-                      </div>
-                    </li>
+            <form action="/moviecomment/" method="POST">
+              <h1>Comments</h1>
+              <div class="comments-container">
+                <ul id="comments-list" class="comments-list">
+                  <li>
+                    <div class="comment-main-level">
 
-                    <li>
-                      <div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""></div>
+                      <!-- Avatar -->
+                      <div class="comment-avatar"><img
+                          src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""></div>
                       <div class="comment-box">
                         <div class="comment-head">
-                          <h6 class="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
-                          <span>hace 10 minutos</span>
+                          <p>This is a comment. </p>
+                          <h6 class="comment-name by-author"><a href="http://creaticode.com/blog"></a></h6>
                           <i class="fa fa-reply"></i>
                           <i class="fa fa-heart"></i>
                         </div>
                         <div class="comment-content">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                          <!-- <input type="hidden" name="movieid" value="{{ d.slug }}"> -->
+                          <p>This is a comment. </p>
+
                         </div>
                       </div>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <div class="comment-main-level">
-                    <div class="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg" alt=""></div>
-                    <div class="comment-box">
-                      <div class="comment-head">
-                        <h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena Rojero</a></h6>
-                        <span>hace 10 minutos</span>
-                        <i class="fa fa-reply"></i>
-                        <i class="fa fa-heart"></i>
-                      </div>
-                      <div class="comment-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                      </div>
+                    
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <form>
+                    <ul class="comments-list reply-list">
+                      <li>
+                        <div class="comment-avatar"><img
+                            src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg" alt=""></div>
+                        <div class="comment-box">
+                          <div class="comment-head">
+                            <h6 class="comment-name"><a href="http://creaticode.com/blog">Lorena Rojero</a></h6>
+                            <span>hace 10 minutos</span>
+                            <i class="fa fa-reply"></i>
+                            <i class="fa fa-heart"></i>
+                          </div>
+                          <div class="comment-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure
+                            laudantium vitae, praesentium optio, sapiente distinctio illo?
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div>
                 <div class="row">
                   <div class="col-25">
                     <label for="Your Comment">Your Comment</label>
                   </div>
                   <div class="col-75">
-                    <textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
-                  </div>
-                  <div class="col-25">
-                    <input type="submit" value="Post">
+                    <input type="text" id="comment" name="comments" placeholder="Enter your comment">
+                    <div class="col-25">
+                      <input type="submit" value="Post">
+                    </div>
                   </div>
                 </div>
-              </form>
-            </div>
+            </form>
           </div>
           <div class="similarmov">
-            <h1>Similar Movie's</h1>
+            <h1>Similar Movies</h1>
             <br>
             <div class="similar">
+              {% for m in movie %}
               <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
+                <img src="{{ m.poster }}" alt="" />
                 <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
+                  <h1>{{ m.name }}</h1>
+                  <!-- <p>
+                    {{ m.summary|truncatechars:30 | linebreaks }}
+                  </p> -->
                   <div class="buttons2">
                     <button><i class="fas fa-share-alt"></i></button>
                     <button><i class="fas fa-heart"></i></button>
@@ -899,167 +491,18 @@
                     <button><i class="far fa-bookmark"></i></button>
                   </div>
                   <div class="buttons">
-                    <a>
+                    <a href="{{ m.trailer }}">
                       <i class="fab fa-youtube"></i>
                       Trailer
                     </a>
-                    <a>
+                    <a href="/watch/{{ m.slug }}">
                       <i class="fab fa-youtube"></i>
                       Movie
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
+              {% endfor %}
             </div>
             <div class="seemore">
               <a href="">See More <i class="fas fa-forward"></i></a>
@@ -1069,89 +512,69 @@
         <div class="right">
           <div class="cate">
             <h1>Categories</h1>
+            {% for n in nav %}
             <ul>
-              <li><a href="">first item</a></li>
-              <li><a href="">second item</a></li>
-              <li><a href="">third item</a></li>
-              <li><a href="">Fee</a></li>
-              <li><a href="">Fi</a></li>
-              <li><a href="">Fo</a></li>
-              <li><a href="">Fum</a></li>
-              <li><a href="">Fee</a></li>
-              <li><a href="">Fi</a></li>
-              <li><a href="">Fo</a></li>
-              <li><a href="">Fum</a></li>
+              <li><a href="/genre/{{ n.genre }}">{{ n.genre }}</a></li>
             </ul>
+            {% endfor %}
           </div>
           <div class="trendnow">
             <h1>Trending Now</h1>
-            <ol>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fee</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fi</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fo</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fum</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fee</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fi</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fo</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fum</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fee</a></li>
-              <li><img src="../static/images/mov1.jpg"><a href="">Fi</a></li>
-            </ol>
+            {% for m in movie %}
+            <ul>
+              <li><img src="{{ m.poster }}"><a href="/movie-about/{{ m.slug }}">{{ m.name }}</a></li>
+            </ul>
+            {% endfor %}
           </div>
         </div>
       </div>
     </section>
     <section>
-        <footer class="footer-distributed">
-          <div class="footer-left">
-            <!-- <h3>Company<span>logo</span></h3> -->
-            <img src="../static/images/logo_final.png">
-            <p class="footer-links">
-              <a href="index.html" class="link-1">Home</a>
-              <a href="About.html">About</a>
-              <a href="FAQ.html">Faq</a>
-              <a href="Feedback-FAQ.html">Contact</a>
-              <a href="Feedback-FAQ.html">Feedback</a>
-            </p>
-            <p class="footer-company-name">Talkies © 2021</p>
+      <footer class="footer-distributed">
+        <div class="footer-left">
+          <!-- <h3>Company<span>logo</span></h3> -->
+          <img src="{% static 'images/logo_final.png' %}">
+          <p class="footer-links">
+            <a href="/" class="link-1">Home</a>
+            <a href="/about">About</a>
+            <a href="/faq">Faq</a>
+            <a href="/feedback">Contact</a>
+            <a href="/feedback">Feedback</a>
+          </p>
+          <p class="footer-company-name">Talkies © 2021</p>
+        </div>
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
           </div>
-          <div class="footer-center">
-            <div>
-              <i class="fa fa-map-marker"></i>
-              <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
-            </div>
-            <div>
-              <i class="fa fa-phone"></i>
-              <p>+1.555.555.5555</p>
-            </div>
-            <div>
-              <i class="fa fa-envelope"></i>
-              <p><a href="mailto:support@company.com">support@company.com</a></p>
-            </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+1.555.555.5555</p>
           </div>
-          <div class="footer-right">
-            <p class="footer-company-about">
-              <span>About the company</span>
-              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-            </p>
-            <div class="footer-icons">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-github"></i></a>
-            </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@company.com</a></p>
           </div>
-        </footer>
+        </div>
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>About the company</span>
+            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
+            vehicula sit amet.
+          </p>
+          <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+      </footer>
     </section>
   </div>
-  <script src="../static/js/navbar.js"></script>
-  <script src="../static/js/loading.js"></script>
+  <script src="{% static 'js/navbar.js' %}"></script>
+  <script src="{% static 'js/loading.js' %}"></script>
 </body>
 
 </html>
-
-
-
-
-
-

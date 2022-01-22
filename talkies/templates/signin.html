@@ -1,0 +1,440 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talkies - Sign Up/In</title>
+    <link
+      rel="icon"
+      type="image/ico"
+      href="{% static 'images/log_t_final (2).png' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/initial.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'Feedback-FAQ.html
+    Feedback-FAQ.htmlcss/search_navbar.css' %}">    
+    <link rel="stylesheet" href="{% static 'css/snow.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signin_up.css' %}" />
+    
+  </head>
+
+  <body onload="loadingfunction()">
+    <div id="loading"></div>
+    <div class="navbar">
+      <div class="logo">
+          <a href="/"><img src="{% static 'images/logo_final.png' %}" alt=""></a>
+      </div>
+      <div class="right_nav cc-rockmenu" id="navbar">
+          <ul>
+              <li>
+                  <div class="dropdown rolling">
+                      <a href="/" class="dropbtn rolling_icon">
+                          <i class="fas fa-home"></i>
+                      </a>
+                      <span> <a href="/">Home</a></span>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon">
+                          <i class="fas fa-theater-masks"></i> </a><span><button href="">Genre</button></span>
+                      <div class="dropdown-content">
+                          <div class="row">
+                              {% for n in nav %}
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/genre/{{ n.genre }}">{{ n.genre }}</a>
+                                  </div>
+                              </div>
+                              {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon">
+                          <i class="fas fa-desktop"></i> </a><span><button href="">Quality</button></span>
+                      <div class="dropdown-content">
+                          <div class="row">
+                              {% for n in nav %}
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="s/quality/{{ n.quality }}">{{ n.quality }}</a>
+                                  </div>
+                              </div>
+                              {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon">
+                          <i class="fas fa-calendar-week"></i> </a><span><button href="">Year</button></span>
+                      <div class="dropdown-content">
+                          <div class="row">
+                              {% for n in nav %}
+                              <div class="card_drop 1">
+                                  <div class="card_drop_image">
+                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                  </div>
+                                  <div class="card_drop_title title-white">
+                                      <a href="/year/{{ n.year }}">{{ n.year }}</a>
+                                  </div>
+                              </div>
+                              {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="dropdown rolling">
+                      <a class="dropbtn rolling_icon">
+                          <i class="fas fa-sign-in-alt"></i> </a><span><a href="/user/signup">Sign In / Up</a></span>
+                  </div>
+              </li>
+          </ul>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+          </a>
+      </div>
+  </div>
+    <div class="divider-grid">
+      <div class="background_snow">
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+      </div>
+      <section>
+        <div class="main">
+          <div class="container a-container is-txl" id="a-container">
+            <form class="form" id="a-form" method="" action="">
+              <h2 class="form_title title">Create Account</h2>
+              <div class="form__icons">
+                <a href="" class="form__icon"><i class="fab fa-google"></i></a
+                ><a href="" class="form__icon"><i class="fa fa-facebook"></i></a
+                ><a href="" class="form__icon"><i class="fa fa-twitter"></i></a>
+              </div>
+              <span class="form__span">or use email for registration</span>
+              <input class="form__input" type="text" placeholder="Name" />
+              <input class="form__input" type="text" placeholder="Email" />
+              <input
+                class="form__input"
+                type="password"
+                placeholder="Password"
+              />
+              <button class="form__button button submit" type="submit">
+                SIGN UP
+              </button>
+            </form>
+          </div>
+          <div class="container b-container is-txl is-z200" id="b-container">
+            <form class="form" id="b-form" method="POST" action="">
+                {% csrf_token %}
+              <h2 class="form_title title">Sign in to Website</h2>
+              <div class="form__icons">
+                <a href="" class="form__icon"><i class="fab fa-google"></i></a
+                ><a href="" class="form__icon"><i class="fa fa-facebook"></i></a
+                ><a href="" class="form__icon"><i class="fa fa-twitter"></i></a>
+              </div>
+              <span class="form__span">or use your username</span>
+              <input class="form__input" type="text" placeholder="username" name="username"/>
+              <input
+                class="form__input"
+                type="password"
+                placeholder="Password"
+                name="password"
+                id="password"
+              /><a class="form__link">Forgot your password?</a>
+              <input class="button" type="submit" value="SIGN IN"> 
+            </form>
+          </div>
+          <div class="switch is-txr" id="switch-cnt">
+
+            <div class="switch__circle"></div>
+            <div class="switch__circle switch__circle--t is-txr"></div>
+
+            <div class="switch__container is-hidden" id="switch-c2">
+              <h2 class="switch__title title">Welcome Back !</h2>
+              <p class="switch__description description">
+                To keep connected with us please login with your personal info
+              </p>
+              <button class="switch__button button switch-btn">SIGN IN</button>
+            </div>
+
+            <div class="switch__container" id="switch-c1">
+              <h2 class="switch__title title">Hello Friend !</h2>
+              <p class="switch__description description">
+                Enter your personal details and start journey with us
+              </p>
+              <a class="switch__button button switch-btn" href="/user/signup">SIGN UP</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- end  -->
+      </section>
+      <section>
+        <footer class="footer-distributed">
+          <div class="footer-left">
+            <!-- <h3>Company<span>logo</span></h3> -->
+            <img src="{% static 'images/logo_final.png' %}">
+            <p class="footer-links">
+              <a href="/" class="link-1">Home</a>
+              <a href="/about">About</a>
+              <a href="/fa1">Faq</a>
+              <a href="/feedback">Contact</a>
+              <a href="/feedback">Feedback</a>
+            </p>
+            <p class="footer-company-name">Talkies © 2021</p>
+          </div>
+          <div class="footer-center">
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+            </div>
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+1.555.555.5555</p>
+            </div>
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="mailto:support@company.com">support@company.com</a></p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <p class="footer-company-about">
+              <span>About the company</span>
+              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            </p>
+            <div class="footer-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </div>
+    <script src="{% static 'js/navbar.js' %}"></script>
+    <script src="{% static 'js/res_navbar.js' %}"></script>
+    <script src="{% static 'js/loading.js' %}"></script>
+    <script src="{% static 'js/signin_up.js' %}"></script>
+  </body>
+</html>

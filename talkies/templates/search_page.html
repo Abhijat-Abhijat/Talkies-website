@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +9,7 @@
     <link
       rel="icon"
       type="image/ico"
-      href="../static/images/log_t_final (2).png"
+      href="{% static 'images/log_t_final (2).png' %}"
     />
     <script
       src="https://kit.fontawesome.com/9e6a57f71b.js"
@@ -22,27 +23,27 @@
       href="https://fonts.googleapis.com/css?family=Lovers+Quarrel"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../static/css/loading.css">
-    <link rel="stylesheet" href="../static/css/navbar.css">
-    <link rel="stylesheet" href="../static/css/search_navbar.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/snow.css">
-    <link rel="stylesheet" href="../static/css/filter.css">
-    <link rel="stylesheet" href="../static/css/right-card.css">
-    <link rel="stylesheet" href="../static/css/card_right_side.css">
-    <link rel="stylesheet" href="../static/css/pagination.css">
-    <link rel="stylesheet" href="../static/css/footer.css">
-    <link rel="stylesheet" href="../static/css/search_page.css" />
+    <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/search_navbar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/snow.css' %}">
+    <link rel="stylesheet" href="{% static 'css/filter.css' %}">
+    <link rel="stylesheet" href="{% static 'css/right-card.css' %}">
+    <link rel="stylesheet" href="{% static 'css/card_right_side.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pagination.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/search_page.css' %}" />
   </head>
 
   <body onload="loadingfunction()">
     <div id="loading"></div>
     <div class="navbar">
       <div class="logo">
-          <a href="index.html"><img src="../static/images/logo_final.png" alt=""></a>
+          <a href="/"><img src="{% static 'images/logo_final.png' %}" alt=""></a>
       </div>
       <div class="search-container">
-        <form action="">
-            <input type="text" placeholder="Enter your movie search" name="search" />
+        <form action="/search" method="get">
+            <input type="text" placeholder="Enter your movie search" name="query" id="query" />
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
@@ -50,86 +51,10 @@
           <ul>
               <li>
                   <div class="dropdown rolling">
-                      <a href="index.html" class="dropbtn rolling_icon">
+                      <a href="/" class="dropbtn rolling_icon">
                           <i class="fas fa-home"></i>
                       </a>
-                      <span> <a href="index.html">Home</a></span>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-cookie-bite"></i> </a><span><button href="">Movies</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="../static/images/wallpaper_1.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                      <span> <a href="/">Home</a></span>
                   </div>
               </li>
               <li>
@@ -138,72 +63,16 @@
                           <i class="fas fa-theater-masks"></i> </a><span><button href="">Genre</button></span>
                       <div class="dropdown-content">
                           <div class="row">
+                            {% for n in nav %}
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/genre/{{ n.genre }}">{{ n.genre }}</a>
                                   </div>
                               </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
+                              {% endfor %}
                           </div>
                       </div>
                   </div>
@@ -214,72 +83,16 @@
                           <i class="fas fa-desktop"></i> </a><span><button href="">Quality</button></span>
                       <div class="dropdown-content">
                           <div class="row">
+                            {% for n in nav %}
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/quality/{{ n.quality }}">{{ n.quality }}</a>
                                   </div>
                               </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
+                              {% endfor %}
                           </div>
                       </div>
                   </div>
@@ -290,246 +103,42 @@
                           <i class="fas fa-calendar-week"></i> </a><span><button href="">Year</button></span>
                       <div class="dropdown-content">
                           <div class="row">
+                            {% for n in nav %}
                               <div class="card_drop 1">
                                   <div class="card_drop_image">
                                       <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                   </div>
                                   <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
+                                      <a href="/year/{{ n.year }}">{{ n.year }}</a>
                                   </div>
                               </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
+                              {% endfor %}
                           </div>
                       </div>
                   </div>
               </li>
+              
+              {% if user.is_authenticated %}
               <li>
                   <div class="dropdown rolling">
                       <a class="dropbtn rolling_icon">
-                          <i class="fas fa-utensils"></i> </a><span><button href="">TV Shows</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon"> <i class="fas fa-mask"></i> </a><span><button
-                              href="">Web-Series</button></span>
-                      <div class="dropdown-content">
-                          <div class="row">
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                              <div class="card_drop 1">
-                                  <div class="card_drop_image">
-                                      <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                  </div>
-                                  <div class="card_drop_title title-white">
-                                      <a href="search_page.html">Link 1</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                          <i class="fas fa-user"></i> </a><span><a href="/user/profile">Profile</a></span>
                   </div>
               </li>
               <li>
                   <div class="dropdown rolling">
                       <a class="dropbtn rolling_icon">
-                          <i class="fas fa-sign-in-alt"></i> </a><span><a href="signin_up.html">Sign In / Up</a></span>
+                          <i class="fas fa-sign-out-alt"></i> </a><span><a href="/user/logout">Log Out</a></span>
                   </div>
               </li>
+              {% else %}
               <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-user"></i> </a><span><a href="user_profile.html">Profile</a></span>
-                  </div>
-              </li>
-              <li>
-                  <div class="dropdown rolling">
-                      <a class="dropbtn rolling_icon">
-                          <i class="fas fa-sign-out-alt"></i> </a><span><a href="">Log Out</a></span>
-                  </div>
-              </li>
+                <div class="dropdown rolling">
+                    <a class="dropbtn rolling_icon">
+                        <i class="fas fa-sign-in-alt"></i> </a><span><a href="/user/signup">Sign In / Up</a></span>
+                </div>
+            </li>
+            {% endif %}
           </ul>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
               <i class="fa fa-bars"></i>
@@ -1047,19 +656,15 @@
             </div>
           </div>
           <div class="right_card_side">
-            <h1 style="color:white;padding:0 50px;">2339 results found</h1>
+            <h1 style="color:white;padding:0 50px;">{{ allmovies|length }} search results found.</h1>
             <div class="wrapper">
+              {% for all in allmovies %} 
               <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
+                <img src="{{ all.poster }}" alt="" />
                 <div class="descriptions">
-                  <h1>John Wick 3</h1>
+                  <h1><a href="/movie-about/{{ all.slug }}">{{ all.name }}</a></h1>
                   <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
+                    {{ all.summary|truncatechars:100 | linebreaks }}
                   </p>
                   <div class="buttons2">
                     <button><i class="fas fa-share-alt"></i></button>
@@ -1070,585 +675,16 @@
                   <div class="buttons">
                     <a>
                       <i class="fab fa-youtube"></i>
-                      Trailer
+                      {{ all.trailer }}
                     </a>
                     <a>
                       <i class="fab fa-youtube"></i>
-                      Movie
+                      {{ all.stream }}
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <img src="../static/images/download.jpeg" alt="" />
-                <div class="descriptions">
-                  <h1>John Wick 3</h1>
-                  <p>
-                    After gunning down a member of the High Table -- the shadowy
-                    international assassin's guild -- legendary hit man John
-                    Wick finds himself stripped of the organization's protective
-                    services. Now stuck with a $14 million bounty on his head,
-                    Wick must fight his way through the streets of New York as
-                    he becomes the target of the world's most ruthless killers.
-                  </p>
-                  <div class="buttons2">
-                    <button><i class="fas fa-share-alt"></i></button>
-                    <button><i class="fas fa-heart"></i></button>
-                    <button><i class="fas fa-comment-alt"></i></button>
-                    <button><i class="far fa-bookmark"></i></button>
-                  </div>
-                  <div class="buttons">
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Trailer
-                    </a>
-                    <a>
-                      <i class="fab fa-youtube"></i>
-                      Movie
-                    </a>
-                  </div>
-                </div>
-              </div>
+              {% endfor %}
             </div>
             <div class="pagination:container">
               <div class="pagination:number arrow">
@@ -1711,13 +747,13 @@
         <footer class="footer-distributed">
           <div class="footer-left">
             <!-- <h3>Company<span>logo</span></h3> -->
-            <img src="../static/images/logo_final.png">
+            <img src="{% static 'images/logo_final.png' %}">
             <p class="footer-links">
-              <a href="index.html" class="link-1">Home</a>
-              <a href="About.html">About</a>
-              <a href="FAQ.html">Faq</a>
-              <a href="Feedback-FAQ.html">Contact</a>
-              <a href="Feedback-FAQ.html">Feedback</a>
+              <a href="/" class="link-1">Home</a>
+              <a href="/about">About</a>
+              <a href="/faq">Faq</a>
+              <a href="/feedback">Contact</a>
+              <a href="/feedback">Feedback</a>
             </p>
             <p class="footer-company-name">Talkies © 2021</p>
           </div>
@@ -1744,14 +780,14 @@
               <a href="#"><i class="fa fa-facebook"></i></a>
               <a href="#"><i class="fa fa-twitter"></i></a>
               <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-github"></i></a>
+              <a href="https://www.github.com/ghostx31/Talkies---Website"><i class="fa fa-github"></i></a>
             </div>
           </div>
         </footer>
     </section>
     </div>
-    <script src="../static/js/loading.js"></script>
-    <script src="../static/js/navbar.js"></script>
-    <script src="../static/js/accordion.js"></script>
+    <script src="{% static 'js/loading.js' %}"></script>
+    <script src="{% static 'js/navbar.js' %}"></script>
+    <script src="{% static 'js/accordion.js' %}"></script>
   </body>
 </html>

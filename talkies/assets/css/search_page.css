@@ -45,12 +45,6 @@ section:nth-of-type(2) {
   grid-template-rows: auto auto auto;
   row-gap: 20px;
 }
-.wrapper h2 {
-  color: white;
-  width: 85vw;
-  text-align: center;
-  font-size: 3rem;
-}
 .filter h3 {
   color: #03e9f4;
   text-align: center;
@@ -65,7 +59,7 @@ section:nth-of-type(2) {
   padding:0 2vw ;
   width: 100vw;
   position: fixed; 
-  z-index: 9999;
+  z-index: 99;
   background-color: black;
 }
 .accordion{
